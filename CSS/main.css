@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+:root{
+    --light1:#f5efe5;
+    --light2:#303960 ;
+    --light3:#f8b24f;
+    --light4:#ea9a96;
+    --dark1:#0b1730;
+    --dark2:#27496d;
+    --dark3:#00909e;
+    --dark4:#becad4;
+    
+
+}
+.light{
+    --bg: var(--light1);
+    --bgNav: linear-gradient(to left, var(--light2), var(--dark2));
+    --color: black;
+
+}
+.dark{
+    --bg:var(--dark1);
+    --bgNav: linear-gradient(to right, var(--dark2), var(--dark3));
+    --color:var(--dark4);
+}
+body{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    color: var(--color);
+    transition: background 0.5s ease, color 0.9s ease ;
+
+
+}
+footer{
+    background-color: #303960;
+    height: 10vh;
+  
+
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 5vh;
+}
+.onload{
+    padding: 7vw;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 100;
+    font-size: x-large;
+    color: lightgreen;
+    position: fixed;
+    z-index: 999;
+    background-color: black;
+    height: 100%;
+    width:100%;
+    top: 0;
+    display: flex;
+
+}
+a{
+    color: #e5e5e5;
+    text-decoration: none;
+}
+nav{
+    min-height: 45px;
+    background-color: var(--bgNav);
+    background-image: var(--bgNav);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 5vh;
+    z-index: 100;
+    
+}
+.lightSwitch{
+    background-color: hotpink;
+    border-radius: 1vw;
+    padding: 4px;
+    z-index: 99;
+}
+
+.logo{
+    vertical-align: middle;
+    height: 5vh;
+    font-weight: 600;
+    color: #e5e5e5;
+
+}
+.logo p{
+    padding: 3px;
+    display: flex;
+    margin-block-start:0 ;
+    margin-block-end: 0;
+
+    
+
+}
+.menu{
+    margin: 0%;
+    padding: 0%;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    text-decoration: none;
+    
+    z-index: 99;
+}
+.menu li {
+    list-style: none;
+    
+    transition: ease 0.1s;
+    
+    
+
+}
+#li1:hover{
+    
+    font-weight: 700;
+    text-shadow: 2px 2px gray;
+}
+#li2:hover{
+    font-weight: 700;
+    text-shadow: 2px 2px gray;
+
+}
+#li3:hover{
+    font-weight: 700;
+    text-shadow: 2px 2px gray;
+
+}
+#li4:hover{
+    font-weight: 700;
+    text-shadow: 2px 2px gray;
+
+}
+
+
+
+
+
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:  rgb(202, 198, 198);
+    margin: 5px;
+    /*transition: all  ease 1s;*/
+
+}
+.line1{
+    transition: ease 0.9s;
+}
+.line2{
+    transition: ease 0.5s;
+}
+.line3 {
+    transition: ease 0.7s;
+}
+
+.landing{
+    position: absolute;
+    height: 95vh ;
+    width: 100% ;
+    padding: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+    background:url(./background.jpg) ;
+    background-size: cover;
+    top: 0;
+    display: table ;
+    text-align: center;
+    opacity: 0.5;
+    z-index: 1;
+}
+.landing1{
+    position: absolute;
+    height: 95vh ;
+    width: 100% ;
+    padding: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 3em;
+    background:url(./background1.png) ;
+    background-size: cover;
+    top: 0;
+    display: table ;
+    text-align: center;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.onLanding{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 5vh;
+    padding-top: 50vh;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 55;
+}
+.main{
+    margin-top: 100vh;
+    padding: 5%;
+    display :none ;
+}
+
+@media screen and (max-width:1024px){
+    .menu{
+        width: 60%;
+     }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .menu {
+        position: absolute;
+        right : 0px;
+        height: 95vh;
+        top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:30vw;
+        transform: translateX(100%) ;
+        transition: 0.6s ease-in;
+        color: #e5e5e5;
+        background-color: #303960;
+    }
+    .menu li {
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+        z-index: 99;
+    }
+    .menu-open{
+
+        transform: translateX(0%);
+    }
+    @keyframes menuAnimation{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+            }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+    
+        }
+    
+}
+.toggle .line1{
+    transform: rotate(-405deg) translate(-5px,6px);
+
+}
+.toggle .line2{
+    opacity: 0;
+
+}
+.toggle .line3{
+    transform: rotate(405deg) translate(-5px,-6px);
+
+}
+
+}
