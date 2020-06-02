@@ -1,66 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 :root{
     --light1:#f5efe5;
     --light2:#303960 ;
-    --light3:#f8b24f;
+    --light3:#f7ce95;
     --light4:#ea9a96;
-    --dark1:#0b1730;
+    --dark1:#070e1f;
     --dark2:#27496d;
     --dark3:#00909e;
     --dark4:#becad4;
-    
+    --mid3:#1e2d70;
+    --mid2:#0d648a;
+    --b:black;
 
 }
 .light{
     --bg: var(--light1);
-    --bgNav: linear-gradient(to left, var(--light2), var(--dark2));
-    --color: black;
-
+    --bgNav: linear-gradient(to left, var(--light2), var(--dark3));
+    --color:var(--b);
+    --color2: var(--dark4);
+    --bg1:var(--dark2);
+    --bgNav2: linear-gradient(to left, var(--light2), var(--mid2));
+    --op:var(--dark2);
 }
 .dark{
     --bg:var(--dark1);
     --bgNav: linear-gradient(to right, var(--dark2), var(--dark3));
     --color:var(--dark4);
+    --color2: var(--light1);
+    --bg1:var(--light3);
+    --bgNav2: linear-gradient(to right, var(--mid2), var(--dark3));
+    --op:var(--dark3);
+}
+html{
+    overflow-x: hidden;
 }
 body{
     margin:0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    
     background: var(--bg);
     color: var(--color);
     transition: background 0.5s ease, color 0.9s ease ;
 
-
 }
 footer{
+    align-items: center;
+    vertical-align: middle;
     background-color: #303960;
-    height: 10vh;
+    height: 7vh;
+    width: 100vw;
   
 
 }
 .contact{
     display: flex;
     align-items: center;
+    vertical-align: middle;
     justify-content: space-around;
     width: 100%;
-    padding-top: 5vh;
+    padding-top: 3vh;
+    padding-left: 0;
+    
 }
+
 .onload{
-    padding: 7vw;
+
+    padding: 5vw;
     font-family: 'Share Tech Mono', monospace;
     font-weight: 100;
-    font-size: x-large;
+    font-size: medium;
     color: lightgreen;
     position: fixed;
     z-index: 999;
     background-color: black;
-    height: 100%;
-    width:100%;
+    height: 100vh;
+    width: 90vw;
     top: 0;
-    display: flex;
+    display: initial;
+    overflow-x: hidden;
 
 }
 a{
@@ -68,7 +89,7 @@ a{
     text-decoration: none;
 }
 nav{
-    min-height: 45px;
+  
     background-color: var(--bgNav);
     background-image: var(--bgNav);
     display: flex;
@@ -76,14 +97,61 @@ nav{
     align-items: center;
     font-family: 'Roboto', sans-serif;
     height: 5vh;
+    width: 100vw;
     z-index: 100;
+    position: fixed;
+    top: 0;
+
     
 }
 .lightSwitch{
-    background-color: hotpink;
-    border-radius: 1vw;
-    padding: 4px;
+    background-color: none;
+    border-radius: 10px;
+    border: solid 1px white;
+    background-color: var(--bg1);
+    width: 48px;
+    height: 24px;
     z-index: 99;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    align-items: center;
+}
+.lighto{
+    
+    background-image: url(../pic/astral.png);
+    height: 18px;
+    width: 18px;
+    z-index: 110;
+    background-size: cover;
+    left: 0;
+    margin: 2px;
+}
+.darko{
+    left: 22px;
+    background-image: url(../pic/moon.png);
+    height: 18px;
+    width: 18px;
+    z-index: 110;
+    background-size: cover;
+    margin: 2px;
+}
+.tg{
+    position: absolute;
+    border: solid 3px var(--op);
+    height: 18px;
+    width: 20px;
+    border-radius: 11px;
+    background-color: var(--bg);
+    z-index: 120;
+    transition: 0.6s;
+    transform: translateX(-10px);
+
+
+}
+.tgl{
+    transform: translateX(10px);
+
 }
 
 .logo{
@@ -171,9 +239,7 @@ nav{
     position: absolute;
     height: 95vh ;
     width: 100% ;
-    padding: 1em;
-    margin-bottom: 1em;
-    padding-bottom: 3em;
+
     background:url(./background.jpg) ;
     background-size: cover;
     top: 0;
@@ -186,9 +252,6 @@ nav{
     position: absolute;
     height: 95vh ;
     width: 100% ;
-    padding: 1em;
-    margin-bottom: 1em;
-    padding-bottom: 3em;
     background:url(./background1.png) ;
     background-size: cover;
     top: 0;
@@ -199,22 +262,30 @@ nav{
 }
 
 .onLanding{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
     position: absolute;
+    text-shadow: 2px 1px var(--op) ;
     top: 0px;
     left: 0px;
     text-align: center;
     vertical-align: middle;
     margin-top: 5vh;
-    padding-top: 50vh;
-    height: 100%;
-    width: 100%;
+    padding-top: 25vh;
+    height: 50vh;
+    width: 100vw;
     opacity: 1;
     z-index: 55;
 }
+.onLanding h2{
+    font-weight: 500;
+}
 .main{
+    font-family: 'Noto Sans JP', sans-serif;
     margin-top: 100vh;
-    padding: 5%;
-    display :none ;
+    padding: 4vw;
+    display: table;
+    
 }
 
 @media screen and (max-width:1024px){
@@ -238,8 +309,8 @@ nav{
         width:30vw;
         transform: translateX(100%) ;
         transition: 0.6s ease-in;
-        color: #e5e5e5;
-        background-color: #303960;
+        color:var(--color2);
+        background-image: var(--bgNav2);
     }
     .menu li {
         opacity: 0;

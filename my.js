@@ -20,8 +20,10 @@ menuOpen();
 
 function lightSwitch(){
     const ls = document.querySelector(".lightSwitch");
-     const b = document.body;
+    const b = document.body;
+    const tg = document.querySelector(".tg");
     ls.addEventListener('click',()=>{
+        tg.classList.toggle("tgl")
       if ( b.className == "light" ){
           b.className = "dark";
       }
@@ -48,10 +50,15 @@ function typeWriter() {
 }
 typeWriter();
 
-$( document ).click(function() {
 
-    $( ".onload" ).fadeOut( "slow", function() {
+const fade = ()=>{
+    const on = document.querySelector(".onload");
 
-          $(".main").css("display", "table");  
-    } );
-} );
+    on.addEventListener('click',()=>{
+        on.style.opacity='0';
+        on.style.display="none";
+        
+    });
+        
+};
+fade();
