@@ -3,30 +3,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 :root{
-    --light1:#f5efe5;
-    --light2:#303960 ;
-    --light3:#f7ce95;
-    --light4:#ea9a96;
-    --dark1:#070e1f;
-    --dark2:#27496d;
-    --dark3:#00909e;
+    --light1:#e2e2e2;
+    --light2:#2e4449 ;
+    --l1:#7f877e;
+    --light3:#f6d186;
+    --dark1:#1b262c;
+    --dark2:#0f4c81;
+    --dark3:#1e5c7b;
     --dark4:#becad4;
-    --mid3:#1e2d70;
-    --mid2:#0d648a;
+    --mid3:#475959;
+    --mid2:#19577d;
     --b:black;
+    --ab:#ccf0e1;
 
 }
 .light{
     --bg: var(--light1);
-    --bgNav: linear-gradient(to left, var(--light2), var(--dark3));
+    --bg2:var(--dark2);
+    --bg3:var(--light2);
+    --bgNav: linear-gradient(to left, var(--light2), var(--l1));
     --color:var(--b);
     --color2: var(--dark4);
     --bg1:var(--dark2);
-    --bgNav2: linear-gradient(to left, var(--light2), var(--mid2));
+    --bgNav2: linear-gradient(to left, var(--light2), var(--mid3));
     --op:var(--dark2);
 }
 .dark{
+    --bg3:var(--light3);
     --bg:var(--dark1);
+    --bg2:var(--dark3);
     --bgNav: linear-gradient(to right, var(--dark2), var(--dark3));
     --color:var(--dark4);
     --color2: var(--light1);
@@ -36,37 +41,40 @@
 }
 html{
     overflow-x: hidden;
+
 }
 body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     margin:0;
     padding: 0;
-    width: 100vw;
-    
+    width: 100%;
+    height: 100vh;
     background: var(--bg);
     color: var(--color);
     transition: background 0.5s ease, color 0.9s ease ;
-
-}
-footer{
-    align-items: center;
-    vertical-align: middle;
-    background-color: #303960;
-    height: 7vh;
-    width: 100vw;
-  
-
-}
-.contact{
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 3vh;
-    padding-left: 0;
+ 
+   
     
 }
+nav{
+  
+    background-color: var(--bgNav);
+    background-image: var(--bgNav);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    width: 100vw;
+    z-index: 199;
+    position: fixed;
+    top: 0;
+    opacity: 1;
 
+    
+}
 .onload{
 
     padding: 5vw;
@@ -77,38 +85,112 @@ footer{
     position: fixed;
     z-index: 999;
     background-color: black;
-    height: 100vh;
-    width: 90vw;
+    height: 100%;
+    width: 90%;
     top: 0;
     display: initial;
     overflow-x: hidden;
+    display: none;
 
 }
+.main{
+
+    padding-top: 3vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    padding-top: 100vh;
+    padding-left : 4vw;
+    padding-right: 4vw;
+    z-index: 100;
+}
+.footer{
+    position: relative;
+    align-items: left;
+    background-color: #303960;
+    width: 100vw;
+
+}
+.contact{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
+.sm{
+    background-image: url(../pic/git.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: var(--ab);
+    border:solid 1px var(--bg);
+    transition: ease all 0.3s;
+}
+.sm:hover{
+    transform: scale(1.1);
+    background-color: white;
+
+
+}
+.sm1{
+    background-image: url(../pic/tw1.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: var(--ab);
+    border:solid 1px var(--bg);
+    transition: ease all 0.3s;
+}
+.sm1:hover{
+    transform: scale(1.1);
+    background-color: white;
+}
+.sm2{
+    background-image: url(../pic/li2.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: var(--ab);
+    border:solid 1px var(--bg);
+    transition: ease all 0.3s;
+}
+.sm2:hover{
+    transform: scale(1.1);
+    background-color: white;
+
+}
+
+.cr{
+    font-size: small;
+    font-weight: 100;
+    border-radius: 1px;
+    border-top: solid grey 2px ;
+    text-align: left;
+    padding: 2px;
+    margin-left: 5px;
+    width: 70vw;
+    height: 10px;
+    margin-top: 0;
+
+}
+
 a{
     color: #e5e5e5;
     text-decoration: none;
 }
-nav{
-  
-    background-color: var(--bgNav);
-    background-image: var(--bgNav);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    height: 5vh;
-    width: 100vw;
-    z-index: 100;
-    position: fixed;
-    top: 0;
 
-    
-}
 .lightSwitch{
     background-color: none;
     border-radius: 10px;
     border: solid 1px white;
-    background-color: var(--bg1);
+    background-color: var(--bg3);
     width: 48px;
     height: 24px;
     z-index: 99;
@@ -237,9 +319,8 @@ nav{
 
 .landing{
     position: absolute;
-    height: 95vh ;
+    height: 100% ;
     width: 100% ;
-
     background:url(./background.jpg) ;
     background-size: cover;
     top: 0;
@@ -250,7 +331,7 @@ nav{
 }
 .landing1{
     position: absolute;
-    height: 95vh ;
+    height: 100% ;
     width: 100% ;
     background:url(./background1.png) ;
     background-size: cover;
@@ -270,22 +351,40 @@ nav{
     left: 0px;
     text-align: center;
     vertical-align: middle;
-    margin-top: 5vh;
-    padding-top: 25vh;
-    height: 50vh;
-    width: 100vw;
+    margin-top: 5%;
+    padding-top: 25%;
+    height: 50%;
+    width: 100%;
     opacity: 1;
     z-index: 55;
 }
 .onLanding h2{
     font-weight: 500;
 }
-.main{
-    font-family: 'Noto Sans JP', sans-serif;
-    margin-top: 100vh;
-    padding: 4vw;
-    display: table;
+
+.skills{
+    padding-bottom: 6vh;
+}
+.ms{
+    text-align: center;
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+    border-top: solid 2px var(--bg2);
+    padding-bottom: 6vh;
+}
+.sk{
+    display: flex; 
+    vertical-align: top;
+    align-items: top;
+    justify-content: space-around;
     
+}
+li{
+    list-style: none;
+}
+.myProjects{
+    border-top: solid 2px var(--bg2);
+
 }
 
 @media screen and (max-width:1024px){
@@ -301,8 +400,8 @@ nav{
     .menu {
         position: absolute;
         right : 0px;
-        height: 95vh;
-        top: 5vh;
+        height: calc(100vh - 30px);
+        top: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -323,6 +422,9 @@ nav{
     .menu-open{
 
         transform: translateX(0%);
+    }
+    .sk{
+        flex-direction: column;
     }
     @keyframes menuAnimation{
         from{

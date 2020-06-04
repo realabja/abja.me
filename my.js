@@ -18,7 +18,7 @@ const menuOpen = () => {
 }
 menuOpen();
 
-function lightSwitch(){
+const lightSwitch = ()=>{
     const ls = document.querySelector(".lightSwitch");
     const b = document.body;
     const tg = document.querySelector(".tg");
@@ -41,7 +41,7 @@ var i = 0;
 var txt = `!!! this web site is under maintenane sorry for any inconvenience!!!                        please click(touch) anywhere to continue....  `  ;
 var speed = 50;
 
-function typeWriter() {
+const typeWriter = ()=> {
   if (i < txt.length) {
     document.getElementById("onload").innerHTML += txt.charAt(i);
     i++;
