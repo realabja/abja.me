@@ -88,7 +88,7 @@ nav{
     height: 100%;
     width: 90%;
     top: 0;
-    display: initial;
+    
     overflow-x: hidden;
 }
 .main{
@@ -98,7 +98,7 @@ nav{
     padding-top: 100vh;
     padding-left : 4vw;
     padding-right: 4vw;
-    z-index: 100;
+    z-index: 19;
 }
 .footer{
     position: relative;
@@ -452,6 +452,39 @@ li{
     padding-bottom: 15px;
     padding-top: 15px;
 }
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+ .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 7px;
+    bottom: 100%;
+    left: -150%;
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.9;
+  }
 
 @media screen and (max-width:1024px){
     .menu{

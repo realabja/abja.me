@@ -7,29 +7,32 @@ if (visit){
     c.style.display="none";
 }
 if (light){
-    let b = document.body;
     b.className=light;
 }
 if(b.className=="dark"){
     tg.classList.add("tgl");
 }
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const menuli = document.querySelectorAll('.menu li');
+const menuclose = ()=>{
+    menu.classList.remove('menu-open');
+    burger.classList.remove('toggle');
+    menuli.forEach( (link,index) => {
+        if (link.style.animation){
+            link.style.animation ='';
+        }})};
 
-console.log(b.className);
 const menuOpen = () => {
-    const burger = document.querySelector('.burger');
-    const menu = document.querySelector('.menu');
-    const menuli = document.querySelectorAll('.menu li');
     burger.addEventListener('click',()=>{
         menu.classList.toggle('menu-open');
         menuli.forEach( (link,index) => {
             if (link.style.animation){
-                link.style.animation =''
+                link.style.animation ='';
             }
             else{
                 link.style.animation= `menuAnimation 0.5s ease forwards ${index/4 + 0.5}s`;
-                
                 } } ) ;
-        
         burger.classList.toggle('toggle');
     });
 }
@@ -57,7 +60,7 @@ lightSwitch();
 
 
 var i = 0;
-var txt = `!!! this web site is under maintenane sorry for any inconvenience!!!                        please click(touch) anywhere to continue....  `  ;
+var txt = "This website is by no mean a complete representation of me, sorry for any inconvinence and if you have any opinion on how i can improve my website please let me know 😄 ✌️ have a nice time"  ;
 var speed = 50;
 
 const typeWriter = ()=> {
@@ -76,7 +79,8 @@ const fade = ()=>{
     on.addEventListener('click',()=>{
         on.style.opacity='0';
         on.style.display="none";
-        localStorage.setItem("visit","True");
+        localStorage.setItem("visit","true");
+  
         
     });
         
@@ -95,9 +99,25 @@ fade();
  sm2.addEventListener("click",()=>{
     window.open('#', '_blank');
  });
- sm3.addEventListener("click",()=>{
-    window.open('mailto:realabja@gmail.com', '_blank');
+ sm3.addEventListener("click", ()=>{
+    const email="realabja@gmail.com";
+    console.log(email);
+    copyText(email);
+    const tt=document.querySelector(".tooltiptext");
+    tt.style.width="190px";
+    tt.style.left="-270%";
+    tt.innerHTML = "realabja@gmail.com copied";
  });
+ sm3.addEventListener("mouseout",()=>{
+    const tt=document.querySelector(".tooltiptext");
+    tt.style.width="120px";
+    tt.style.left="-150%";
+    tt.innerHTML = "copy";
+ })    
+
+
+
+
 
 const ln = document.querySelector(".ln");
 const ln1 = document.querySelector(".ln1");
@@ -106,3 +126,7 @@ window.addEventListener('load', () => {
     ln.classList.add("ln11");
     ln1.classList.add("ln22")
 });
+
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+ }
