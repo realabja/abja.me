@@ -15,6 +15,7 @@ if(b.className=="dark"){
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const menuli = document.querySelectorAll('.menu li');
+
 const menuclose = ()=>{
     menu.classList.remove('menu-open');
     burger.classList.remove('toggle');
@@ -24,7 +25,6 @@ const menuclose = ()=>{
         }})};
 
 const menuOpen = () => {
-    burger.addEventListener('click',()=>{
         menu.classList.toggle('menu-open');
         menuli.forEach( (link,index) => {
             if (link.style.animation){
@@ -34,14 +34,10 @@ const menuOpen = () => {
                 link.style.animation= `menuAnimation 0.5s ease forwards ${index/4 + 0.5}s`;
                 } } ) ;
         burger.classList.toggle('toggle');
-    });
-}
-menuOpen();
+    }
 
+const ls = document.querySelector(".lightSwitch");
 const lightSwitch = ()=>{
-    const ls = document.querySelector(".lightSwitch");
-    const b = document.body;
-    ls.addEventListener('click',()=>{
         tg.classList.toggle("tgl");
       if ( b.className == "light" ){
           b.className = "dark";
@@ -51,10 +47,8 @@ const lightSwitch = ()=>{
       else{
           b.className="light";
           localStorage.setItem("light","light");
-      }})
-     
-};
-lightSwitch();
+      }}
+
 
 
 
