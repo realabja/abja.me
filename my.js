@@ -2,6 +2,9 @@ const visit = localStorage.getItem("visit");
 const light = localStorage.getItem("light");
 const tg = document.querySelector(".tg");
 const b = document.body;
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const menuli = document.querySelectorAll('.menu li');
 if (visit){
     let c  = document.querySelector(".onload");
     c.style.display="none";
@@ -12,9 +15,6 @@ if (light){
 if(b.className=="dark"){
     tg.classList.add("tgl");
 }
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
-const menuli = document.querySelectorAll('.menu li');
 
 const menuclose = ()=>{
     menu.classList.remove('menu-open');
@@ -78,10 +78,7 @@ const fade = ()=>{
         on.style.opacity='0';
         on.style.display="none";
         localStorage.setItem("visit","true");
-  
-        
-    });
-        
+    });      
 };
 fade();
  const sm = document.querySelector(".sm");
