@@ -122,7 +122,7 @@ const ln1 = document.querySelector(".ln1");
 
 window.addEventListener('load', () => {
     ln.classList.add("ln11");
-    ln1.classList.add("ln22")
+    ln1.classList.add("ln22");
 });
 
 function copyText(text) {
