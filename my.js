@@ -47,6 +47,10 @@ const lightSwitch = ()=>{
       else{
           b.className="light";
           localStorage.setItem("light","light");
+
+
+
+          
       }}
 
 
