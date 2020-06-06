@@ -190,6 +190,7 @@ nav{
     border-top: solid grey 2px ;
     text-align: left;
     padding: 2px;
+    padding-bottom: 6px;
     margin-left: 5px;
     width: 70vw;
     height: 10px;
@@ -523,7 +524,9 @@ li{
     }
     .landing1{
         background-position-x: center;
-
+    }
+    .myProjects{
+        padding-bottom: 15px;
     }
     @keyframes on1{ 
         from{

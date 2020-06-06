@@ -99,9 +99,7 @@ fade();
     console.log(email);
     copyText(email);
     const tt=document.querySelector(".tooltiptext");
-    tt.style.width="190px";
-    tt.style.left="-270%";
-    tt.innerHTML = "realabja@gmail.com copied";
+    tt.innerHTML = "copied";
  });
  sm3.addEventListener("mouseout",()=>{
     const tt=document.querySelector(".tooltiptext");
