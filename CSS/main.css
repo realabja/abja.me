@@ -8,11 +8,11 @@
     --l1:#7f877e;
     --light3:#f6d186;
     --dark1:#1b262c;
-    --dark2:#0f4c81;
-    --dark3:#1e5c7b;
+    --dark2:#30597c;
+    --dark3:#326d75;
     --dark4:#becad4;
     --mid3:#475959;
-    --mid2:#19577d;
+    --mid2:#316677;
     --b:black;
     --ab:#ccf0e1;
 
@@ -41,7 +41,7 @@
 }
 html{
     overflow-x: hidden;
-
+    scroll-behavior: smooth;
 }
 body{
     position: relative;
@@ -102,7 +102,7 @@ nav{
 }
 .footer{
     position: relative;
-    align-items: left;
+    background-image: var(--bgNav);
     background-color: #303960;
     width: 100vw;
 
@@ -127,7 +127,8 @@ nav{
     border-radius: 15px;
     background-color: var(--ab);
     border:solid 1px var(--bg);
-    transition: ease all 0.3s;
+    transition: ease all 0.2s;
+    cursor: pointer;
 }
 .sm:hover{
     transform: scale(1.1);
@@ -143,7 +144,8 @@ nav{
     border-radius: 15px;
     background-color: var(--ab);
     border:solid 1px var(--bg);
-    transition: ease all 0.3s;
+    transition: ease all 0.2s;
+    cursor: pointer;
 }
 .sm1:hover{
     transform: scale(1.1);
@@ -157,14 +159,30 @@ nav{
     border-radius: 15px;
     background-color: var(--ab);
     border:solid 1px var(--bg);
-    transition: ease all 0.3s;
+    transition: ease all 0.2s;
+    cursor: pointer;
 }
 .sm2:hover{
     transform: scale(1.1);
     background-color: white;
 
 }
+.sm3{
+    background-image: url(../pic/gmail.png);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: var(--ab);
+    border:solid 1px var(--bg);
+    transition: ease all 0.2s;
+    cursor: pointer;
+}
+.sm3:hover{
+    transform: scale(1.1);
+    background-color: white;
 
+}
 .cr{
     font-size: small;
     font-weight: 100;
@@ -336,8 +354,8 @@ a{
     top: 0;
     display: table ;
     text-align: center;
-    opacity: 0.9;
-    z-index: 2;
+    opacity: 1;
+    z-index: 57;
 }
 
 .onLanding{
@@ -348,16 +366,54 @@ a{
     top: 0px;
     left: 0px;
     text-align: center;
-    vertical-align: middle;
     margin-top: 5%;
-    padding-top: 25%;
-    height: 50%;
+    padding-top: 15%;
+    height: 100%;
     width: 100%;
     opacity: 1;
     z-index: 55;
+    
+
 }
-.onLanding h2{
-    font-weight: 500;
+.ln{
+    bottom: 0;
+    margin-top: 70vh;
+    opacity: 0;
+    
+
+}
+.ln1{
+    bottom: 0;
+    opacity: 0;
+
+}
+.ln11{
+    animation: on1 2s cubic-bezier(0,1.4,0,.88)  1  forwards, wl 2s linear infinite alternate ;
+
+}
+.ln22{ 
+    
+    animation: on1 2s  cubic-bezier(.79,.82,.52,1.04) 0.5s  1  forwards , wl 2s linear infinite alternate ;
+}
+@keyframes wl{
+    form{
+        
+    }
+    to{
+        
+        
+    }
+}@keyframes on1{ 
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-70vh); 
+    }
+  
+
 }
 
 .skills{
@@ -383,6 +439,18 @@ li{
 .myProjects{
     border-top: solid 2px var(--bg2);
 
+}
+.resume{
+    
+    text-align: center;
+    border-top: solid 2px var(--bg2);
+    padding-bottom: 20px;
+}
+.d1{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 @media screen and (max-width:1024px){
@@ -417,11 +485,33 @@ li{
         cursor: pointer;
         z-index: 99;
     }
+    .landing{
+        background-position-x: center;
+    }
+    .landing1{
+        background-position-x: center;
+
+    }
+    @keyframes on1{ 
+        from{
+            opacity: 0;
+            transform: translateY(0);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(-60vh); 
+        }
+      
+    
+    }
     .menu-open{
 
         transform: translateX(0%);
     }
     .sk{
+        flex-direction: column;
+    }
+    .d1{
         flex-direction: column;
     }
     @keyframes menuAnimation{
