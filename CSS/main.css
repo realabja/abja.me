@@ -125,6 +125,7 @@ nav{
     height: 30px;
     width: 30px;
     border-radius: 15px;
+    
     background-color: var(--ab);
     border:solid 1px var(--bg);
     transition: ease all 0.2s;
@@ -133,6 +134,8 @@ nav{
 .sm:hover{
     transform: scale(1.1);
     background-color: white;
+    border-radius: 6px;
+
 
 
 }
@@ -150,6 +153,7 @@ nav{
 .sm1:hover{
     transform: scale(1.1);
     background-color: white;
+    border-radius: 6px;
 }
 .sm2{
     background-image: url(../pic/li2.png);
@@ -165,6 +169,7 @@ nav{
 .sm2:hover{
     transform: scale(1.1);
     background-color: white;
+    border-radius: 6px;
 
 }
 .sm3{
@@ -180,6 +185,7 @@ nav{
 }
 .sm3:hover{
     transform: scale(1.1);
+    border-radius: 6px;
     background-color: white;
 
 }
