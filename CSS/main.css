@@ -379,7 +379,8 @@ a{
     width: 100%;
     opacity: 1;
     z-index: 55;
-    
+    overflow-y: hidden;
+
 
 }
 .ln{
@@ -400,7 +401,7 @@ a{
 }
 .ln22{ 
     
-    animation: on1 2s  cubic-bezier(.79,.82,.52,1.04) 0.5s  1  forwards , wl 2s linear infinite alternate ;
+     animation: on1 2s  cubic-bezier(.79,.82,.52,1.04) 0.5s  1  forwards , wl 2s linear infinite alternate ;
 }
 @keyframes wl{
     form{
