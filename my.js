@@ -58,7 +58,7 @@ const lightSwitch = ()=>{
 
 
 var i = 0;
-var txt = "This website is by no mean a complete representation of me, sorry for any inconvinence and if you have any opinion on how i can improve my website please let me know 😄 ✌️ have a nice time"  ;
+var txt = "This website is by no mean a complete representation of me, sorry for any inconvinence and if you have any opinion on how I can improve it please let me know 😄 ✌️ have a nice time. ***Click anywhere to continue*** "  ;
 var speed = 50;
 
 const typeWriter = ()=> {
