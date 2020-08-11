@@ -36,7 +36,7 @@ const menuOpen = () => {
         burger.classList.toggle('toggle');
     }
 
-const ls = document.querySelector(".lightSwitch");
+
 const lightSwitch = ()=>{
         tg.classList.toggle("tgl");
       if ( b.className == "light" ){
