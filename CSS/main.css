@@ -290,15 +290,17 @@ a{
     list-style: none;
     
     transition: ease 0.1s;
-    
-    
-
 }
-#li1:hover{
-    
+.menu li:hover{
     font-weight: 700;
     text-shadow: 2px 2px gray;
-}
+    }
+    
+
+
+/* #li1:hover{ */
+    
+   
 #li2:hover{
     font-weight: 700;
     text-shadow: 2px 2px gray;
@@ -364,7 +366,10 @@ a{
     opacity: 1;
     z-index: 57;
 }
-
+.blogContainer{
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
 .onLanding{
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;

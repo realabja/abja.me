@@ -16,13 +16,13 @@ if(b.className=="dark"){
     tg.classList.add("tgl");
 }
 
-const menuclose = ()=>{
-    menu.classList.remove('menu-open');
-    burger.classList.remove('toggle');
-    menuli.forEach( (link,index) => {
-        if (link.style.animation){
-            link.style.animation ='';
-        }})};
+// const menuclose = ()=>{
+//     menu.classList.remove('menu-open');
+//     burger.classList.remove('toggle');
+//     menuli.forEach( (link,index) => {
+//         if (link.style.animation){
+//             link.style.animation ='';
+//         }})};
 
 const menuOpen = () => {
         menu.classList.toggle('menu-open');
@@ -31,7 +31,7 @@ const menuOpen = () => {
                 link.style.animation ='';
             }
             else{
-                link.style.animation= `menuAnimation 0.5s ease forwards ${index/4 + 0.5}s`;
+                link.style.animation= `menuAnimation 0.5s ease forwards ${index/5 + 0.5}s`;
                 } } ) ;
         burger.classList.toggle('toggle');
     }
