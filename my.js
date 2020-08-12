@@ -5,6 +5,9 @@ const b = document.body;
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const menuli = document.querySelectorAll('.menu li');
+const contact = document.querySelector("#li4");
+const popingItem = document.querySelectorAll(".x");
+
 if (visit){
     let c  = document.querySelector(".onload");
     c.style.display="none";
@@ -16,13 +19,28 @@ if(b.className=="dark"){
     tg.classList.add("tgl");
 }
 
-// const menuclose = ()=>{
-//     menu.classList.remove('menu-open');
-//     burger.classList.remove('toggle');
-//     menuli.forEach( (link,index) => {
-//         if (link.style.animation){
-//             link.style.animation ='';
-//         }})};
+
+contact.addEventListener('click', ()=>{
+    popingItem.forEach((item,index)=>{
+        
+        item.style.animation=`pop 0.3s ease 2 ${index/4+0.3}s alternate `
+    })
+});
+
+const terminate = ()=>{ popingItem.forEach((item)=>{
+    item.style.animation="none"})};
+
+contact.addEventListener("click", ()=>{
+    setTimeout(terminate, 1700);
+});
+
+const menuclose = ()=>{
+    menu.classList.remove('menu-open');
+    burger.classList.remove('toggle');
+    menuli.forEach( (link,index) => {
+        if (link.style.animation){
+            link.style.animation ='';
+        }})};
 
 const menuOpen = () => {
         menu.classList.toggle('menu-open');
@@ -35,6 +53,7 @@ const menuOpen = () => {
                 } } ) ;
         burger.classList.toggle('toggle');
     }
+
 
 
 const lightSwitch = ()=>{
@@ -71,6 +90,8 @@ const typeWriter = ()=> {
 typeWriter();
 
 
+
+
 const fade = ()=>{
     const on = document.querySelector(".onload");
 
@@ -81,6 +102,10 @@ const fade = ()=>{
     });      
 };
 fade();
+
+
+
+
  const sm = document.querySelector(".sm");
  const sm1 = document.querySelector(".sm1");
  const sm2 = document.querySelector(".sm2");
@@ -92,7 +117,7 @@ fade();
     window.open('https://twitter.com/realabja', '_blank');
  });
  sm2.addEventListener("click",()=>{
-    window.open('#', '_blank');
+    window.open('https://www.linkedin.com/in/abbas-jafari-028a601b4/', '_blank');
  });
  sm3.addEventListener("click", ()=>{
     const email="realabja@gmail.com";
