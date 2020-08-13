@@ -43,6 +43,13 @@ contact.addEventListener("click", ()=>{
 });
 
 
+const menuclose = ()=>{
+    menu.classList.remove('menu-open');
+    burger.classList.remove('toggle');
+    menuli.forEach( (link,index) => {
+        if (link.style.animation){
+            link.style.animation ='';
+        }})};
 
 
 
