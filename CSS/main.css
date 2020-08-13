@@ -147,7 +147,7 @@ nav{
     bottom: 0;
     margin-bottom: -10px;
     left: 0;
-    background-image:linear-gradient(0deg, var(--bg) 0%, var(--bg) 5%, rgba(9,9,121,0) 30%, rgba(0,212,255,0) 100%);
+    background-image:linear-gradient(0deg, var(--bg) 0%, var(--bg) 5%, rgba(9,9,121,0) 50%, rgba(0,212,255,0) 100%);
     height: 35vh;
     width: 100%; 
 }
@@ -665,9 +665,7 @@ li{
     body{
         overflow-x: hidden;
     }
-    .post{
-        flex-direction: column;
-    }
+    
     .menu {
         position: absolute;
         right : 0px;
@@ -695,6 +693,25 @@ li{
     }
     .landing1{
         background-position-x: center;
+    }
+    .posts{
+        font-family: 'Noto Sans JP', sans-serif;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        margin: 0;
+    }
+    .post{
+        flex-direction: column;
+        height: 50vh;
+        
+    }
+    .postContent{
+        margin: 10px;
+        position: relative;
+        border-radius: 10px;
+        height: 35vh;
+        width: 100%;
+        
     }
     .myProjects{
         padding-bottom: 15px;
