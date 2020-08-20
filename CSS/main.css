@@ -109,6 +109,12 @@ nav{
     /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1)) */
     
 }
+.post a{
+    color: rgb(98, 127, 255);
+}
+.postComtainer a{
+    color: rgb(98, 127, 255);
+}
 .postPic{
     box-shadow: var(--bs) 1px 1px 5px;
     display: flex;
