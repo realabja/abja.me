@@ -11,11 +11,6 @@ const popingItem = document.querySelectorAll(".x");
 
 if (light){
     if (light!=null) {
-        console.log(light);
-        console.log(b.className);
-
-
-
         b.className=light;
     }
 }
