@@ -666,7 +666,7 @@ li{
         width: 60%;
      }
      .logo{
-        font-stretch:expanded;    
+        transform: scale(1,1); 
      }
     
 }
