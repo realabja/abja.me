@@ -406,20 +406,19 @@ a{
 }
 
 .logo{
-    vertical-align: middle;
-    height: 5vh;
     font-weight: 600;
     color: #e5e5e5;
-
+    padding: 1px;
+    border: 2px solid rgba(0, 0, 0, 0.171);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    border-radius: 6px;
+    transform:scale(1.3,1)
 }
-.logo p{
-    padding: 3px;
-    display: flex;
-    margin-block-start:0 ;
-    margin-block-end: 0;
-
+.logo h1{
+    margin: 0%;
     
-
 }
 .menu{
     margin: 0%;
@@ -666,6 +665,10 @@ li{
     .menu{
         width: 60%;
      }
+     .logo{
+        font-stretch:expanded;    
+     }
+    
 }
 @media screen and (max-width:768px){
     body{
