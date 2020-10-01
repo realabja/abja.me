@@ -137,8 +137,8 @@ fade();
 
 
 
-const ln = document.querySelector(".ln");
-const ln1 = document.querySelector(".ln1");
+const ln = document.querySelector("#ln");
+const ln1 = document.querySelector("#ln1");
 
 window.addEventListener('load', () => {
     ln.classList.add("ln11");
@@ -148,3 +148,47 @@ window.addEventListener('load', () => {
 function copyText(text) {
     navigator.clipboard.writeText(text);
  }
+
+//  adding moving welcome text
+//  adding moving welcome text
+
+const sleep = function (time){
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+// window.addEventListener("mousemove", e => {console.log(e)})
+const home = document.querySelector("#home")
+home.addEventListener("mouseover", e =>{
+    ln.classList.remove("ln11")
+    ln1.classList.remove("ln22")
+})
+const homeHeight = home.offsetHeight
+const homeWidth = home.offsetWidth
+
+home.addEventListener("mousemove", e => {
+    let x = ln.dataset.newX
+    let y = ln.dataset.newY
+    let posX = (e.layerX) - (homeWidth/2)
+    let posY = (e.layerY) - (homeHeight - (homeHeight*0.8))
+    let disX = posX - x
+    let disY = posY - y
+
+    let dist = Math.min(500, (Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2))))
+    let dis = (500-dist)
+    let movX = -(((dis/40)**2)+((dis/50)))* disX/100
+    let movY = -(((dis/40)**2)+((dis/50)))* disY/100
+    ln.style.transform = `translate(${movX}px, ${movY}px)`;
+    ln1.style.transform = `translate(${movX}px, ${movY}px)`;
+    ln.dataset.newX = movX
+    ln1.dataset.newX = movX
+    ln.dataset.newY =  movY
+    ln1.dataset.newY =  movY
+
+    console.log (dis, movX)
+})
+
+const hoverText = function(){
+    pass
+}
+
+
