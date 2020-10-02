@@ -165,30 +165,54 @@ home.addEventListener("mouseover", e =>{
 const homeHeight = home.offsetHeight
 const homeWidth = home.offsetWidth
 
-home.addEventListener("mousemove", e => {
-    let x = ln.dataset.newX
-    let y = ln.dataset.newY
-    let posX = (e.layerX) - (homeWidth/2)
-    let posY = (e.layerY) - (homeHeight - (homeHeight*0.8))
-    let disX = posX - x
-    let disY = posY - y
 
-    let dist = Math.min(500, (Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2))))
-    let dis = (500-dist)
-    let movX = -(((dis/40)**2)+((dis/50)))* disX/100
-    let movY = -(((dis/40)**2)+((dis/50)))* disY/100
-    ln.style.transform = `translate(${movX}px, ${movY}px)`;
-    ln1.style.transform = `translate(${movX}px, ${movY}px)`;
-    ln.dataset.newX = movX
-    ln1.dataset.newX = movX
-    ln.dataset.newY =  movY
-    ln1.dataset.newY =  movY
 
-    console.log (dis, movX)
-})
+let x =  ln.offsetLeft + (ln.offsetWidth/2);
+let y =  ln.offsetTop; + (ln.offsetHeight/2);
+// ln.style.transition = "1s ease-in-out;";
 
-const hoverText = function(){
-    pass
+// home.addEventListener("mousemove", e => {
+//     let posX = (e.layerX);
+//     let posY = (e.layerY);
+//     let disX = posX - x;
+//     let disY = posY - y;
+//     let dist = Math.min(500, (Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2))));
+//     let force = 10000 / dist**1.001;
+//     if (force >200 ){
+//         force = 200;
+//     }
+//     let dierectionX = -disX/dist;
+//     let dierectionY = -disY/dist;
+//     ln.style.transform = `translate(${dierectionX*force}px, ${dierectionY*force}px)`;
+// })
+const repulse = (elems, parent)=>{
+    let x = [];
+    let y = [];
+    for (el in elems){
+        x.push(Number(elems[el].offsetLeft) + Number(elems[el].offsetWidth/2));
+        y.push(Number(elems[el].offsetTop) + Number(elems[el].offsetHeight/2));
+    }
+    parent.addEventListener("mousemove", (e) => {
+        posX = Number(e.layerX);
+        posY = Number(e.layerY);
+   
+        for (let i = 0; i < elems.length; i++ ){
+            let disX = Number(Number(posX) - Number(x[i]));
+            console.log(x[i])
+            
+            
+            let disY = Number(posY - Number(y[i]));
+            let dist = Number(Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2)));
+            let force = 10000 / dist**1.001;
+            if (force >200 ){
+                force = 200;
+            }
+            let dierectionX = Number(-disX/dist);
+            let dierectionY = Number(-disY/dist);
+            elems[i].style.transform = `translate(${dierectionX*force}px, ${dierectionY*force}px)`;
+        }
+    })
 }
 
+repulse([ln1, ln], home);
 
