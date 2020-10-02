@@ -197,10 +197,7 @@ const repulse = (elems, parent)=>{
         posY = Number(e.layerY);
    
         for (let i = 0; i < elems.length; i++ ){
-            let disX = Number(Number(posX) - Number(x[i]));
-            console.log(x[i])
-            
-            
+            let disX = Number(Number(posX) - Number(x[i]));            
             let disY = Number(posY - Number(y[i]));
             let dist = Number(Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2)));
             let force = 10000 / dist**1.001;
