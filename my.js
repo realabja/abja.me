@@ -137,14 +137,6 @@ fade();
 
 
 
-const ln = document.querySelector("#ln");
-const ln1 = document.querySelector("#ln1");
-
-window.addEventListener('load', () => {
-    ln.classList.add("ln11");
-    ln1.classList.add("ln22");
-});
-
 function copyText(text) {
     navigator.clipboard.writeText(text);
  }
@@ -157,34 +149,17 @@ const sleep = function (time){
 }
 
 // window.addEventListener("mousemove", e => {console.log(e)})
+
+
 const home = document.querySelector("#home")
-home.addEventListener("mouseover", e =>{
-    ln.classList.remove("ln11")
-    ln1.classList.remove("ln22")
-})
-const homeHeight = home.offsetHeight
-const homeWidth = home.offsetWidth
+const ln = document.querySelector("#ln");
+const ln1 = document.querySelector("#ln1");
+const ln2 = document.querySelector("#ln2");
+const ln3 = document.querySelector("#ln3");
+const ln4 = document.querySelector("#ln4");
+const ln5 = document.querySelector("#ln5");
+const ln6 = document.querySelector("#ln6");
 
-
-
-let x =  ln.offsetLeft + (ln.offsetWidth/2);
-let y =  ln.offsetTop; + (ln.offsetHeight/2);
-// ln.style.transition = "1s ease-in-out;";
-
-// home.addEventListener("mousemove", e => {
-//     let posX = (e.layerX);
-//     let posY = (e.layerY);
-//     let disX = posX - x;
-//     let disY = posY - y;
-//     let dist = Math.min(500, (Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2))));
-//     let force = 10000 / dist**1.001;
-//     if (force >200 ){
-//         force = 200;
-//     }
-//     let dierectionX = -disX/dist;
-//     let dierectionY = -disY/dist;
-//     ln.style.transform = `translate(${dierectionX*force}px, ${dierectionY*force}px)`;
-// })
 const repulse = (elems, parent)=>{
     let x = [];
     let y = [];
@@ -192,24 +167,30 @@ const repulse = (elems, parent)=>{
         x.push(Number(elems[el].offsetLeft) + Number(elems[el].offsetWidth/2));
         y.push(Number(elems[el].offsetTop) + Number(elems[el].offsetHeight/2));
     }
+    let disX ;
+    let disY ;
+    let dist ;
+    let force ;
+    let dierectionX ;
+    let dierectionY ;
     parent.addEventListener("mousemove", (e) => {
         posX = Number(e.layerX);
         posY = Number(e.layerY);
    
         for (let i = 0; i < elems.length; i++ ){
-            let disX = Number(Number(posX) - Number(x[i]));            
-            let disY = Number(posY - Number(y[i]));
-            let dist = Number(Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2)));
-            let force = 10000 / dist**1.001;
-            if (force >200 ){
-                force = 200;
+            disX = posX - x[i];            
+            disY = posY - y[i];
+            dist = Number(Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2)));
+            force = 1/ (dist/200)**4;
+            if (force >100 ){
+                force = 100;
             }
-            let dierectionX = Number(-disX/dist);
-            let dierectionY = Number(-disY/dist);
+            dierectionX = -disX/dist;
+            dierectionY = -disY/dist;
             elems[i].style.transform = `translate(${dierectionX*force}px, ${dierectionY*force}px)`;
         }
     })
 }
 
-repulse([ln1, ln], home);
+repulse([ln2, ln3, ln4, ln5, ln6, ln1, ln], home);
 

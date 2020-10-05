@@ -523,7 +523,7 @@ a{
     font-weight: 700;
     position: absolute;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     text-shadow: 2px 1px var(--op) ;
     top: 0px;
@@ -534,32 +534,23 @@ a{
     opacity: 1;
     z-index: 55;
     overflow-y: hidden;
-    justify-content: center;
     align-items: center;
     font-size: 1.2em;
-    /* color: rgb(73, 192, 73); */
-    /* font-family: 'Share Tech Mono', monospace; */
-
-}
-#ln{
-    bottom: 0;
-    opacity: 1;
-    transition: all 0.2s ease-out;
-}
-#ln1{
-    bottom: 0;
-    opacity: 1;
-    transition: all 0.2s ease-out;
 
 
 }
-.ln11{
-    animation: on1 2s cubic-bezier(0,1.4,0,.88)  1  forwards ;
-
+.onLanding>div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
 }
-.ln22{ 
-    
-     animation: on1 2s  cubic-bezier(.79,.82,.52,1.04) 0.5s  1  forwards ;
+.word{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
 }
 @keyframes Lanim{
     0%{
@@ -611,9 +602,7 @@ a{
 .sk{
     display: flex; 
     vertical-align: top;
-    align-items: top;
     justify-content: space-around;
-    
 }
 li{
     list-style: none;
