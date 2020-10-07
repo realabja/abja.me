@@ -7,7 +7,7 @@
     --light2:#2e4449 ;
     --l1:#7f877e;
     --light3:#f6d186;
-    --dark1:#1b262c;
+    --dark1:#2F4850;
     --darkshadow:#161a1f;
     --dark2:#2F4850;
     --dark3:#20343D;
@@ -57,9 +57,6 @@ html{
 }
 body{
     position: relative;
-    /* display: flex; */
-    /* big ooo mistake */
-    flex-direction: column;
     margin:0;
     padding: 0;
     width: 100%;
@@ -83,8 +80,19 @@ nav{
     top: 0;
     opacity: 1;
 }
+#home{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20vh 1rem;
+    text-align: center;
+    background-image: var(--bgNav);
+}
 .blogContainer{
     font-family: 'Noto Sans JP', sans-serif;
+    background-image: var(--bgNav);
     min-height: calc(100vh - 70px);
     padding-top: 30px;
     margin: 0 auto -50px;
@@ -92,12 +100,26 @@ nav{
 }
 .posts{
     font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 60px;
     margin-left: 40px;
     margin-right: 50px;
 }
+.btn{
+    font-size: 1.2em;
+    background-color: var(--bg2);
+    border-radius: 0.8rem;
+    /* border: 0; */
+    padding: 1em 5em;
+    text-transform: uppercase;
+
+
+}
 .post{
+    background: var(--bg);
     display: flex;
     flex-direction: row;
     height: 37vh;
@@ -218,18 +240,22 @@ nav{
     overflow-x: hidden;
 }
 .main{
+    background-image: var(--bgNav);
     display: flex;
     flex-direction: column;
     padding-top: 3vh;
     font-family: 'Noto Sans JP', sans-serif;
-    padding-top: 100vh;
     padding-left : 4vw;
     padding-right: 4vw;
-    z-index: 19;
+    /* z-index: 19; */
 }
 .footer,
 .push {
   height: 50px;
+}
+footer.footer{
+    background-image: var(--bgNav);
+
 }
 
 .footer{
@@ -548,10 +574,13 @@ a{
     justify-content: center;
 }
 .word{
+    user-select: none;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     transition: all 0.3s ease;
+    display: inline-block;
 }
+
 @keyframes Lanim{
     0%{
         left: 0;
@@ -609,8 +638,58 @@ li{
 }
 .myProjects{
     border-top: solid 2px var(--bg2);
-
 }
+.myProjects>section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    
+}
+.myProjects>section>article{
+    flex-basis: 500px;
+    margin: 0.5rem 0.5rem; 
+    flex-grow: 1;
+    height: 50vh;
+    overflow: hidden;
+    box-shadow:  white 0px 0.15rem 0.5rem, white 0px 0.075rem 0.175rem;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.6s ease;
+    transform: scale(0.3) rotateY(90deg);
+    opacity:0;
+    /* display: none; */
+}
+.myProjects>section>article>p h1 h2 h3 h4{
+    z-index: 2;
+}
+.myProjects>section>.observed{
+    display: flex;
+    transform: scale(1) rotateY(0deg);
+    opacity: 1;
+    
+}
+.myProjects>section>article:hover>.imgContainer>img{
+    transform: scale(1.1);
+}
+.myProjects>section>article>.imgContainer{
+    background-color: rgba(99, 99, 74, 0.623);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.imgContainer>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+    transition: all 0.2s ease;
+}
+
 .resume{
     
     text-align: center;
@@ -709,6 +788,7 @@ li{
         padding-bottom: 60px;
         margin: 0;
     }
+    
     .post{
         flex-direction: column;
         height: 50vh;
@@ -722,9 +802,7 @@ li{
         width: 100%;
         
     }
-    .myProjects{
-        padding-bottom: 15px;
-    }
+
     @keyframes on1{ 
         from{
             opacity: 0;

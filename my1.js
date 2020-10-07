@@ -104,3 +104,15 @@ const lightSwitch = ()=>{
     tt.style.left="-150%";
     tt.innerHTML = "copy";
  }) 
+ 
+//  lazy loading posts or infinite scroll
+//  lazy loading posts or infinite scroll
+//  lazy loading posts or infinite scroll
+
+let needLoading = document.querySelectorAll(".post");
+for(let i =0; i < needLoading; i++){
+
+}
+const loadMore = ()=>{
+    
+}
