@@ -3,118 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AbJa</title>
-    <link rel="stylesheet" href="/CSS/main.css">
-   
+    <title>abja.me</title>
+    <link rel="stylesheet" href="dist/style.css">
 </head>
-<body class="light">
-    
-    <div class="onload" id="onload">
+<body>
+    <div id="topOfTPage"></div>
 
-    </div>
+    <div class="loading"></div>
     
-    <nav >
-        <div class="lightSwitch" onclick="lightSwitch()">
-            <div class="lighto"></div>
-            <div class="darko"></div>
-            <div class="tg"></div>
-        </div>
-        <div class="logo">
-           <h1 style="font-size: 22px;">AbJa</h1> 
-        </div>
-       
-        <ul class="menu">
-            <li id="li1">
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="/blog">Blog</a>
-            </li>   
-            <li id="li2">
-                <a href="#about">About</a>
-            </li>  
-            <li id="li3">
-                <a href="#myProjects">My Projects</a>
-            </li>           
-            <li id="li4">
-                <a href="#contact">Contact</a>
-            </li> 
-                             
-        </ul>
-        <div class="burger" onclick="menuOpen()">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+    <header>
+        <h2 class="logo">
+            abja
+        </h2>
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>blog</li>
+                <li>projects</li>
+                <li>contact</li>
+            </ul>
+        </nav>
 
-    </nav>
-        <header id="home">
-        <div>
-            <h2 id="ln" style="margin: 1rem auto ; transition: all 0.3s ease;"> WELCOME </h2>
-            <!-- <br> -->
-            <h2 id="ln1" class="word">To </h2>
-            <h2 id="ln2" class="word">My </h2>
-            <h2 id="ln3" class="word">Corner </h2>
-            <h2 id="ln4" class="word">of </h2>
-            <h2 id="ln5" class="word">The </h2>
-            <h2 id="ln6" class="word">Internet</h2>
-        </div>
+
     </header>
-             
-    <main class="main" onclick="menuclose()">
-        <section class="about" id="about">
-            <h4>About me</h4>
-            <p>  Hi,first thanks for taking time to visit. My name is Abbas Jafari and as far as I can remember technology was my passion particularly computer and information technology. I have been facsinated with all that computer science encompasses from transistors and fetch execute cycle to deep neural network and quantum computing. My intention is to dedicate my life and bring value through computer science, I hope you could help me in that matter . Currently I'm looking to get a job in tech industry and move forward from there. I'm precise and try to be as professioanl as possible,I am a hard-working team-player, i try to push forward and do my best, you can see a summary of my what i can do and contact me from here. peace  ✌️ </p>
-        </section>
+    
+    <section id="landing">
+
+    
+    <div id="middleSection">
+        <h1>Hi, my name is Abbas </h1><img src="pic/neural.svg" alt="">
+    </div>
+
+    <div id="lander">
+        <svg width="" height="" viewBox="0 0 548 645" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M548 22.9959L532.778 18.8579C517.556 14.8746 487.111 6.3665 456.667 2.38318C426.222 -1.75484 395.778 -1.75489 365.333 12.6702C334.889 27.2499 304.444 55.8681 274 62.1718C243.556 68.2435 213.111 52.0007 182.667 45.697C152.222 39.6254 121.778 43.4927 91.3333 47.7467C60.8888 52.0007 30.4445 55.8681 15.2223 58.0724L0 60.1221L0 645H36C51.2222 645 68.5555 645 99 645C129.444 645 148 645 182.667 645C206 645 243.556 645 274 645C304.444 645 312.556 645 343 645C373.444 645 401.556 645 432 645C462.444 645 483.778 645 499 645L548 645L548 22.9959Z" fill="#5000CA" fill-opacity="0.4"/>
+            </svg>
+            
+            <div> <h1>I'm </h1><h1 id="typed"></h1><h1> Enthusiast.</h1></div>
+            
+    </div>  
+    </section>
+    <section id="afterLanding">
         
-        <section class="skills">
-           <h3 class="ms">My skills</h3> 
-           <div class="sk">  
-           <div>
-               <h4>languages that i know</h4>
-                <ul>
-                <li>html css </li>
-                <li>javascript</li>
-                <li>python</li>
-                </ul>
-            </div>
-            <div >
-                <h4>libraries and frameworks</h4> 
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    
-                </ul>
+        <svg width="" height="" viewBox="0 0 548 645" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 622.004L15.2222 626.142C30.4444 630.125 60.8889 638.633 91.3333 642.617C121.778 646.755 152.222 646.755 182.667 632.33C213.111 617.75 243.556 589.132 274 582.828C304.444 576.757 334.889 592.999 365.333 599.303C395.778 605.375 426.222 601.507 456.667 597.253C487.111 592.999 517.555 589.132 532.778 586.928L548 584.878V0L512 0C496.778 0 479.444 0 449 0C418.556 0 400 3.67824e-05 365.333 3.05176e-05C342 3.05176e-05 304.444 0 274 0C243.556 0 235.444 0 205 0C174.556 0 146.444 0 116 0C85.5556 0 64.2223 0 49 0L3.05176e-05 0L0 622.004Z" fill="#5000CA" fill-opacity="0.4"/>
+            </svg>
+            
+    </section>
+    <main>
+        
+        
+        <article>
+            <h2>
+                about me
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sint reiciendis officia consectetur animi consequuntur porro provident veniam pariatur dignissimos, ea, in corporis? Animi voluptatem, quis sint labore corporis quae?Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod omnis ipsum voluptate nulla est itaque inventore porro? Modi recusandae libero reiciendis similique quod, id quibusdam obcaecati cumque ipsa fugit debitis facere autem necessitatibus aspernatur sint beatae? Eaque commodi, aspernatur iste ea possimus expedita deserunt provident officiis, dignissimos rerum ratione nihil blanditiis reprehenderit labore fugiat eveniet libero praesentium nam! Quod numquam similique et provident iusto consectetur assumenda illum officiis, itaque eum recusandae aperiam dolores saepe repudiandae reprehenderit tenetur deserunt aspernatur facilis cum impedit odit aliquam optio? Accusantium ipsum officia tempora vero totam, sequi dicta illum autem ad explicabo asperiores a dolorem.
+            </p>
+        </article>
+        
 
-            </div>
-            </div>
-         
-
-        </section> 
-        <section class="resume">
-            <h4>resume</h4>
-            <div class="d1">
-            <div>
-            Deutsch pdf =>
-            <a id="de" href="/pic/abja-eng.pdf" download="Abbas Jafari lebenslauf" style="color: var(--color);"> 
-             download </a>
-             </div>
-             <div>
-             English pdf => 
-             <a id="de" href="/pic/abja-eng.pdf" download="Abbas Jafari resume" style="color: var(--color);"> 
-                download </a>
-            </div>
-        </div>
-        </section>
-        <section class="myProjects" id="myProjects">
-            <h4 style="text-align: center;">
-                projects
-            </h4>
-            <section>
+        <article >
+            <h2>
+                my projects
+            </h2>
+            <section id="myProjects">
                 <article>
+                    <h3>hey there</h3>
                     <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure doloremque at commodi laboriosam inventore esse, voluptates ex, amet dolore molestiae officia? Dignissimos ad maxime in rem, dolores odio repellendus adipisci.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure doloremque at commodi laboriosam inventore esse, voluptates ex, amet dolore molestiae officia? Dignissimos ad maxime in rem, dolores odio repellendus adipisci.
                     </p>
                     <div class="imgContainer">
                         <img data-lazy="blog/posts/Pathfinding-Visualization/pageimage.gif" alt="Pathfinding-Visualization">
@@ -122,41 +79,53 @@
                     
                 </article>
                 <article>
-                   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga earum laudantium obcaecati eveniet, reprehenderit     omnis ab cum assumenda, inventore cupiditate ipsam libero quam! Quia repellat nobis velit iure nam sequi.
+                    <h3>hey tas</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga earum laudantium obcaecati eveniet, reprehenderit     omnis ab cum assumenda, inventore cupiditate ipsam libero quam! Quia repellat nobis velit iure nam sequi.
                     </p>
-                    <div class="imgContainer">
+                    <div class="imgContainer green">
                         <img data-lazy="blog/posts/Flexbox-is-awesome!/pageimage.gif" alt="Pathfinding-Visualization">
                     </div>
-
+                    
                 </article>
                 <article>
+                    <h3>adfefds</h3>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate at officiis, ullam eos ipsam blanditiis, debitis molestiae eius omnis rem fugiat saepe esse possimus sed repellendus dicta.    Consequuntur, sunt maxime!
                     <div class="imgContainer">
                         <img data-lazy="blog/posts/Class-Objects-and-Variables-in-Python-and-JavaScript/pageimage.png" alt="Pathfinding-Visualization">
                     </div>
                     
-
+                    
                 </article>
+                
             </section>
-            <p style="text-align: center;">
-                you can vist my github to see my projects link at the bottom of the page 
+        </article>
+        <article>
+            <h2>
+                my skills
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus necessitatibus ab pariatur repellendus. Facilis ipsa doloribus placeat asperiores nobis accusamus eligendi cumque, praesentium harum incidunt dolorum nihil ducimus. Fugit accusamus omnis rerum, ipsum maiores praesentium nemo aliquam provident ab nostrum iusto placeat nisi et ex culpa consequatur iste repellat, quasi officiis. Harum corporis natus repellat minus similique sit eius in, omnis et recusandae rerum. Ipsum ad corrupti adipisci, laborum, aperiam unde repudiandae assumenda sequi numquam sunt aut et quas culpa temporibus ab atque veniam minus fuga. Ut harum, nisi cum impedit omnis qui deserunt tenetur blanditiis vitae ipsum praesentium.
             </p>
-        </section>
-       
-       
-    
-    </main>
-    <footer class="footer" onclick="menuclose()">
-        <h4 style="display: none;">contact</h4>
-        <div class="contact" id="contact">
-            <div class="x sm"><a href="#"></a> </div>
-            <div class="x sm1"><a href="#"></a> </div> 
-            <div class="x sm2"><a href="#"></a> </div>
-            <div class="x sm3 tooltip"><a id="aa" href="#"></a> <div class="tooltiptext">copy</div></div>
+        </article>
 
-        </div> 
-        <p class="cr">icon made by <a href="https://www.flaticon.com/authors/freepik">freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> </p>
+
+
+
+
+    </main>
+
+
+
+    <footer>
+        <ul>
+            <li id="github"><a href="https://github.com/realabja">git</a></li>
+            <li id="linkedin"><a href="">link</a></li>
+            <li id="twitter"><a href="">twitter</a></li>
+            <li id="email"><a href="">email</a></li>
+        </ul>
     </footer>
-    <script src="my.js"></script>
+    <div id="cursor"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

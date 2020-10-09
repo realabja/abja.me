@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbJa</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+   
+</head>
+<body class="light">
+    
+    <div class="onload" id="onload">
+
+    </div>
+    
+    <nav >
+        <div class="lightSwitch" onclick="lightSwitch()">
+            <div class="lighto"></div>
+            <div class="darko"></div>
+            <div class="tg"></div>
+        </div>
+        <div class="logo">
+           <h1 style="font-size: 22px;">AbJa</h1> 
+        </div>
+       
+        <ul class="menu">
+            <li id="li1">
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="/blog">Blog</a>
+            </li>   
+            <li id="li2">
+                <a href="#about">About</a>
+            </li>  
+            <li id="li3">
+                <a href="#myProjects">My Projects</a>
+            </li>           
+            <li id="li4">
+                <a href="#contact">Contact</a>
+            </li> 
+                             
+        </ul>
+        <div class="burger" onclick="menuOpen()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </nav>
+        <header id="home">
+        <div>
+            <h2 id="ln" style="margin: 1rem auto ; transition: all 0.3s ease;"> WELCOME </h2>
+            <!-- <br> -->
+            <h2 id="ln1" class="word">To </h2>
+            <h2 id="ln2" class="word">My </h2>
+            <h2 id="ln3" class="word">Corner </h2>
+            <h2 id="ln4" class="word">of </h2>
+            <h2 id="ln5" class="word">The </h2>
+            <h2 id="ln6" class="word">Internet</h2>
+        </div>
+    </header>
+             
+    <main class="main" onclick="menuclose()">
+        <section class="about" id="about">
+            <h4>About me</h4>
+            <p>  Hi,first thanks for taking time to visit. My name is Abbas Jafari and as far as I can remember technology was my passion particularly computer and information technology. I have been facsinated with all that computer science encompasses from transistors and fetch execute cycle to deep neural network and quantum computing. My intention is to dedicate my life and bring value through computer science, I hope you could help me in that matter . Currently I'm looking to get a job in tech industry and move forward from there. I'm precise and try to be as professioanl as possible,I am a hard-working team-player, i try to push forward and do my best, you can see a summary of my what i can do and contact me from here. peace  ✌️ </p>
+        </section>
+        
+        <section class="skills">
+           <h3 class="ms">My skills</h3> 
+           <div class="sk">  
+           <div>
+               <h4>languages that i know</h4>
+                <ul>
+                <li>html css </li>
+                <li>javascript</li>
+                <li>python</li>
+                </ul>
+            </div>
+            <div >
+                <h4>libraries and frameworks</h4> 
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    
+                </ul>
+
+            </div>
+            </div>
+         
+
+        </section> 
+        <section class="resume">
+            <h4>resume</h4>
+            <div class="d1">
+            <div>
+            Deutsch pdf =>
+            <a id="de" href="/pic/abja-eng.pdf" download="Abbas Jafari lebenslauf" style="color: var(--color);"> 
+             download </a>
+             </div>
+             <div>
+             English pdf => 
+             <a id="de" href="/pic/abja-eng.pdf" download="Abbas Jafari resume" style="color: var(--color);"> 
+                download </a>
+            </div>
+        </div>
+        </section>
+        <section class="myProjects" id="myProjects">
+            <h4 style="text-align: center;">
+                projects
+            </h4>
+            <section>
+                <article>
+                    <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure doloremque at commodi laboriosam inventore esse, voluptates ex, amet dolore molestiae officia? Dignissimos ad maxime in rem, dolores odio repellendus adipisci.
+                    </p>
+                    <div class="imgContainer">
+                        <img data-lazy="blog/posts/Pathfinding-Visualization/pageimage.gif" alt="Pathfinding-Visualization">
+                    </div>
+                    
+                </article>
+                <article>
+                   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga earum laudantium obcaecati eveniet, reprehenderit     omnis ab cum assumenda, inventore cupiditate ipsam libero quam! Quia repellat nobis velit iure nam sequi.
+                    </p>
+                    <div class="imgContainer">
+                        <img data-lazy="blog/posts/Flexbox-is-awesome!/pageimage.gif" alt="Pathfinding-Visualization">
+                    </div>
+
+                </article>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate at officiis, ullam eos ipsam blanditiis, debitis molestiae eius omnis rem fugiat saepe esse possimus sed repellendus dicta.    Consequuntur, sunt maxime!
+                    <div class="imgContainer">
+                        <img data-lazy="blog/posts/Class-Objects-and-Variables-in-Python-and-JavaScript/pageimage.png" alt="Pathfinding-Visualization">
+                    </div>
+                    
+
+                </article>
+            </section>
+            <p style="text-align: center;">
+                you can vist my github to see my projects link at the bottom of the page 
+            </p>
+        </section>
+       
+       
+    
+    </main>
+    <footer class="footer" onclick="menuclose()">
+        <h4 style="display: none;">contact</h4>
+        <div class="contact" id="contact">
+            <div class="x sm"><a href="#"></a> </div>
+            <div class="x sm1"><a href="#"></a> </div> 
+            <div class="x sm2"><a href="#"></a> </div>
+            <div class="x sm3 tooltip"><a id="aa" href="#"></a> <div class="tooltiptext">copy</div></div>
+
+        </div> 
+        <p class="cr">icon made by <a href="https://www.flaticon.com/authors/freepik">freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a> </p>
+    </footer>
+    <script src="my.js"></script>
+</body>
+</html>
