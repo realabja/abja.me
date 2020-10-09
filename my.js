@@ -187,7 +187,7 @@ const repulse = (elems, parent)=>{
             }
             dierectionX = -disX/dist;
             dierectionY = -disY/dist;
-            elems[i].style.transform = `translate(${dierectionY*force}px, ${dierectionX*force}px)`;
+            elems[i].style.transform = `translate(${dierectionX*force}px, ${dierectionY*force}px)`;
         }
     })
 }
