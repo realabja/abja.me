@@ -77,6 +77,7 @@ header > nav > ul > li {
 }
 
 #afterLanding {
+  width: 100vw;
   height: 20vh;
   position: relative;
   overflow: hidden;
@@ -97,6 +98,7 @@ header > nav > ul > li {
   }
 }
 #lander {
+  width: 100vw;
   height: 50%;
   overflow: hidden;
   position: relative;
