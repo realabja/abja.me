@@ -80,7 +80,8 @@ header>nav>ul>li{
     overflow: hidden;
     svg{
         position: absolute;
-        width: 100%;        
+        width: 100%;
+        height: auto;        
         bottom: 0;
     }
 }
@@ -101,6 +102,9 @@ header>nav>ul>li{
     height: 50%;
     overflow: hidden;
     position: relative;
+    svg{
+        height:auto;
+    }
     div{
         color: rgb(255, 255, 255);
         position: absolute;
@@ -280,6 +284,8 @@ footer{
     }
 
     ul{
+        margin-left: 0;
+        padding-left: 0;
         display: flex;
         justify-content: space-around;
         li{

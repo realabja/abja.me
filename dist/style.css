@@ -85,6 +85,7 @@ header > nav > ul > li {
 #afterLanding svg {
   position: absolute;
   width: 100%;
+  height: auto;
   bottom: 0;
 }
 
@@ -102,6 +103,9 @@ header > nav > ul > li {
   height: 50%;
   overflow: hidden;
   position: relative;
+}
+#lander svg {
+  height: auto;
 }
 #lander div {
   color: white;
@@ -261,6 +265,8 @@ footer div {
   background-color: var(--darka);
 }
 footer ul {
+  margin-left: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-around;
 }
