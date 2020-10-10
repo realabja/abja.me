@@ -17,10 +17,10 @@
         </h2>
         <nav>
             <ul>
-                <li>home</li>
-                <li>blog</li>
-                <li>projects</li>
-                <li>contact</li>
+                <li> <a href="/#topOfThePage">home</a> </li>
+                <li><a href="/blog">blog</a></li>
+                <li> <a href="/#myProjects">projects</a></li>
+                <li> <a href="#contact">contact</a> </li>
             </ul>
         </nav>
 
@@ -116,16 +116,49 @@
 
 
 
-    <footer>
+    <footer id="contact">
+        <div></div>
         <ul>
-            <li id="github"><a href="https://github.com/realabja">git</a></li>
-            <li id="linkedin"><a href="">link</a></li>
-            <li id="twitter"><a href="">twitter</a></li>
-            <li id="email"><a href="">email</a></li>
+            <li id="github"><a href="https://github.com/realabja">git</a><img src="pic/git.png" alt="" srcset=""></li>
+            <li id="linkedin"><a href="">link</a><img src="pic/tw1.png" alt="" srcset=""></li>
+            <li id="twitter"><a href="">twitter</a><img src="pic/li2.png" alt="" srcset=""></li>
+            <li id="email"><a href="mailto:abbas.jafari@powercoders.org">email</a><img src="pic/gmail.png" alt="" srcset=""></li>
         </ul>
     </footer>
     <div id="cursor"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="app.js"></script>
+    <script src="/app.js"></script>
+
+    <!-- scoth scroll cross browser -->
+<!-- scoth scroll cross browser -->
+<!-- scoth scroll cross browser -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    
+    if (this.hash !== "") {
+      
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+      
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script> -->
+
+<!-- scoth scroll cross browser -->
+<!-- scoth scroll cross browser -->
+<!-- scoth scroll cross browser -->
+<!-- scoth scroll cross browser -->
+
 </body>
 </html>

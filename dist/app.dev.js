@@ -28,108 +28,124 @@ var riseLay = function riseLay(percentage) {
   });
 };
 
-document.addEventListener("scroll", function (e) {
-  var y = 100 - ((window.innerHeight - document.querySelector("#topOfTPage").getBoundingClientRect().top) / window.innerHeight - 1) * 400;
-  riseLay(y);
-});
-var typed = document.querySelector("#typed");
-
-var type = function type() {
-  var fav, i, j;
-  return regeneratorRuntime.async(function type$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          fav = ["a Machine Learning", "a Data Science", "an AI"];
-
-        case 1:
-          if (!true) {
-            _context.next = 20;
-            break;
-          }
-
-          i = 0;
-
-        case 3:
-          if (!(i < fav.length)) {
-            _context.next = 18;
-            break;
-          }
-
-          j = 0;
-
-        case 5:
-          if (!(j < fav[i].length)) {
-            _context.next = 12;
-            break;
-          }
-
-          typed.append(fav[i].charAt(j));
-          _context.next = 9;
-          return regeneratorRuntime.awrap(sleep(100));
-
-        case 9:
-          j++;
-          _context.next = 5;
-          break;
-
-        case 12:
-          _context.next = 14;
-          return regeneratorRuntime.awrap(sleep(2000));
-
-        case 14:
-          typed.innerHTML = "";
-
-        case 15:
-          i++;
-          _context.next = 3;
-          break;
-
-        case 18:
-          _context.next = 1;
-          break;
-
-        case 20:
-        case "end":
-          return _context.stop();
-      }
-    }
+if (document.querySelector("#topOfTPage")) {
+  document.addEventListener("scroll", function (e) {
+    var y = 100 - ((window.innerHeight - document.querySelector("#topOfTPage").getBoundingClientRect().top) / window.innerHeight - 1) * 400;
+    riseLay(y);
   });
-};
+}
 
-type();
-var lazyStuff = document.querySelectorAll("#myProjects>article");
-var observer = new IntersectionObserver(function (objects, observer) {
-  objects.forEach(function (object) {
-    if (object.isIntersecting) {
-      object.target.classList.add("observed");
-      var img;
+if (document.querySelector("#typed")) {
+  var typed = document.querySelector("#typed");
 
-      for (item in object.target.childNodes) {
-        console.log(object.target.childNodes[item]);
+  var type = function type() {
+    var fav, i, j;
+    return regeneratorRuntime.async(function type$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            fav = ["a Machine Learning", "a Data Science", "an AI"];
 
-        if (object.target.childNodes[item].classList.contains("imgContainer")) {
-          img = object.target.childNodes[item];
-
-          for (item in img.childNodes) {
-            if (img.childNodes[item].tagName == "IMG") {
-              img = img.childNodes[item];
+          case 1:
+            if (!true) {
+              _context.next = 20;
               break;
             }
-          }
 
-          src = img.dataset.lazy;
-          console.log(src);
-          img.setAttribute("src", src);
-          console.log(img);
+            i = 0;
+
+          case 3:
+            if (!(i < fav.length)) {
+              _context.next = 18;
+              break;
+            }
+
+            j = 0;
+
+          case 5:
+            if (!(j < fav[i].length)) {
+              _context.next = 12;
+              break;
+            }
+
+            typed.append(fav[i].charAt(j));
+            _context.next = 9;
+            return regeneratorRuntime.awrap(sleep(100));
+
+          case 9:
+            j++;
+            _context.next = 5;
+            break;
+
+          case 12:
+            _context.next = 14;
+            return regeneratorRuntime.awrap(sleep(2000));
+
+          case 14:
+            typed.innerHTML = "";
+
+          case 15:
+            i++;
+            _context.next = 3;
+            break;
+
+          case 18:
+            _context.next = 1;
+            break;
+
+          case 20:
+          case "end":
+            return _context.stop();
         }
       }
+    });
+  };
 
-      observer.unobserve(object.target);
-    }
+  type();
+}
+
+if (document.querySelectorAll("#myProjects>article")) {
+  var lazyStuff = document.querySelectorAll("#myProjects>article");
+  var observer = new IntersectionObserver(function (objects, observer) {
+    objects.forEach(function (object) {
+      if (object.isIntersecting) {
+        object.target.classList.add("observed");
+        var img;
+
+        for (item in object.target.childNodes) {
+          if (object.target.childNodes[item].nodeName != "#text") {
+            console.log(object.target.childNodes[item].classList);
+
+            if (object.target.childNodes[item].classList.contains("imgContainer")) {
+              console.log("some");
+              img = object.target.childNodes[item];
+              console.log(img);
+
+              for (item in img.childNodes) {
+                if (img.childNodes[item].tagName == "IMG") {
+                  img = img.childNodes[item];
+                  src = img.dataset.lazy;
+                  console.log(src);
+                  img.setAttribute("src", src);
+                  console.log(img);
+                }
+              }
+            } // console.log(object.target.childNodes[item])
+
+          }
+        }
+
+        observer.unobserve(object.target);
+      }
+    });
   });
-});
-lazyStuff.forEach(function (object) {
-  console.log("inforeach");
-  observer.observe(object);
-});
+
+  try {
+    lazyStuff.forEach(function (object) {
+      console.log("inforeach");
+      observer.observe(object);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
