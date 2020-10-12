@@ -392,8 +392,8 @@ div{
 
     li{
         padding: 0;
-        margin: 0;
-        width: 25vw;
+        margin: -10px;
+        width: 30vw;
         background-color: var(--cl1);
         transform: scaleY(0);
     }
@@ -442,13 +442,17 @@ section#latestPosts{
     flex-wrap: wrap;
     .cl1{
         background-color: #ed65709c;
+        transition: background-color 3s ease;
+
     }
     .cl2{
         background-color: #ffd186a8;
+        transition: background-color 3s ease;
+
     }
     .cl3{
         background-color: #4e9bb9a9;
-
+        transition: background-color 3s ease;
     }
     .post{
         box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
@@ -459,7 +463,7 @@ section#latestPosts{
         margin: 1rem;
         border-radius: 1rem;
         position: relative;
-        transition: color 2s ease-in-out, transform 0.2s ease, background-color 3s ease;
+        transition: color 1s ease-in-out, transform 0.5s ease, background-color 1s ease;
         .postPic{
             position: absolute;
             object-fit: cover;
@@ -503,11 +507,18 @@ section#latestPosts{
         }
         
         &:hover{
+            background-color: rgba(255, 0, 0, 0);
             color: transparent;
-            transform: translateY(-0.5rem);
-            background-color: rgba(255, 0, 0, 0.075);
-
+            // transform: translateY(-0.5rem);
+            
         } 
     }
+    .wide{
+        flex-basis: 600px;    
+    }
+    .small{
+        flex-basis: 300px;
+    }
+    
 }
 
