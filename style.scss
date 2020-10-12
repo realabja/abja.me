@@ -5,6 +5,14 @@
 :root{
     font-size: 16px;
     --darka: #30323d;
+    --cl1:#4E9BB9;
+    --cl2:#FFD086;
+    --cl3:#F69489;
+    --cl4:#ED6571;
+    --cl5:#68607C;
+
+
+
 }
 html{
     margin: 0;
@@ -64,6 +72,8 @@ header>nav>ul>li{
         // padding-left: 10vw;
         align-items: center;
         justify-content: space-around;
+        position: relative;
+        
         img{
             width:10rem;
             z-index: -2;
@@ -275,19 +285,27 @@ main{
 
 footer{
     position: relative;
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    // padding: 1rem;
     div{
         position: absolute;
         height: 100%;
         width: 100%;
         z-index: -20;
+        padding: 1rem;
         background-color: var(--darka);
     }
-
+    
     ul{
-        margin-left: 0;
+        width: 100%;
+        margin: 1rem 0;
         padding-left: 0;
+        height: 100%;
         display: flex;
         justify-content: space-around;
+    
         li{
             list-style: none;
             color: transparent;
@@ -314,7 +332,7 @@ footer{
                 top: 0;
                 left: 0;
                 width: 100%;
-                z-index: -10;
+                z-index: -2;
                 height: 100%;
             }
         &:hover{
@@ -356,7 +374,30 @@ a{
     text-decoration: none;
     color: inherit;
 }
+div{
+    margin: 0;
+    padding: 0;
+}
+#tran{
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    padding: 0;
 
+    li{
+        padding: 0;
+        margin: 0;
+        width: 25vw;
+        background-color: var(--cl1);
+        transform: scaleY(0);
+    }
+}
 #cursor{
     position: absolute;
     width: 20px;
@@ -364,9 +405,8 @@ a{
     border: 2px solid #010e22;
     border-radius: 222px;
     transition: top 0.8s cubic-bezier(.18,.54,.01,1.03), left 0.8s cubic-bezier(.18,.54,.01,1.03), border 0.5s ease;
-    z-index: -1;
-    
-    
+    z-index: 20;
+    pointer-events: none;
 }
 @keyframes click {
     0%{
@@ -388,3 +428,86 @@ a{
 
     }
 }
+
+
+// blog styling blog styling blog styling 
+// blog styling blog styling blog styling 
+// blog styling blog styling blog styling 
+// blog styling blog styling blog styling 
+
+
+
+section#latestPosts{
+    display: flex;
+    flex-wrap: wrap;
+    .cl1{
+        background-color: #ed65709c;
+    }
+    .cl2{
+        background-color: #ffd186a8;
+    }
+    .cl3{
+        background-color: #4e9bb9a9;
+
+    }
+    .post{
+        box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
+        flex-basis: 400px;
+        height: 40vh;
+        overflow: hidden;
+        flex-grow: 1;
+        margin: 1rem;
+        border-radius: 1rem;
+        position: relative;
+        transition: color 2s ease-in-out, transform 0.2s ease, background-color 3s ease;
+        .postPic{
+            position: absolute;
+            object-fit: cover;
+            z-index: -10;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+            opacity: 0.9;
+            transform: scale(1.1);
+            
+            img{
+                z-index: -3;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                object-fit: cover;
+                transition: all 0.6s ease-in-out;
+            }
+        }
+        h3{
+            padding: 1rem 1rem 5px 1rem;
+            margin: 0;
+        }
+        h6{
+            margin: 0;
+            padding-left: 2rem;
+        }
+        p{
+            max-height: 39%;
+            padding: 1.5rem;
+            margin: 1rem;
+            overflow: hidden;
+            
+        }
+        .readm{
+            padding-left: 80%;
+            margin-top: -0.5rem;
+        }
+        
+        &:hover{
+            color: transparent;
+            transform: translateY(-0.5rem);
+            background-color: rgba(255, 0, 0, 0.075);
+
+        } 
+    }
+}
+

@@ -34,24 +34,31 @@ if (document.querySelector("#topOfTPage")){
     })
 
 }
-if(document.querySelector("#typed")){
-    const typed = document.querySelector("#typed")
-    const type = async ()=>{
-        let fav = [ "a Machine Learning", "a Data Science", "an AI"]
-        while(true){
-            for(let i = 0; i<fav.length; i++){
-                
-                for (let j = 0; j < fav[i].length; j++){
-                    typed.append(fav[i].charAt(j));
-                    await sleep(100);
-                    }
-                await sleep(2000)
-                typed.innerHTML = "";   
+const typed = document.querySelector("#typed")
+
+const type = async ()=>{
+    if(typed){
+    let fav = [ "a Machine Learning", "a Data Science", "an AI"]
+    while(true){
+        for(let i = 0; i<fav.length; i++){
+            
+            for (let j = 0; j < fav[i].length; j++){
+                typed.append(fav[i].charAt(j));
+                await sleep(100);
             }
-        } 
+            await sleep(2000)
+            typed.innerHTML = "";   
+        }
+    } 
+}
+else{
+    return true
+}
 }
 type();
-}
+
+
+
 
 
 if(document.querySelectorAll("#myProjects>article")){
@@ -97,3 +104,50 @@ if(document.querySelectorAll("#myProjects>article")){
         console.log(error)
     }
 }
+// BARBA things
+// BARBA things
+// BARBA things
+barba.init({
+    // sync: true,
+    debug:true,
+    sync:true,
+    transitions: [{
+      name: 'default-transition',
+      async leave(data) {
+        // gsap.from(data.current.container, {
+        //     opacity: 0,
+        //     duration:1,
+        //     ease: Power1.easeOut
+        // });
+        const done = this.async();
+          type();
+           gsap.to("#tran li", {
+              duration:0.5,
+              scaleY: 1,
+              transformOrigin:"bottom left",
+              stagger: 0.2
+              
+            });
+            gsap.to("#tran li", {
+              duration:0.5,
+              delay:1,
+              scaleY: 0,
+              ease: Power2.easeOut,
+              transformOrigin:"bottom left",
+              stagger: 0.1,
+            })
+        await sleep(1000);
+        done();
+            
+      },
+       async enter(data) {
+          
+            type();
+            // gsap.from(data.next.container, {
+            //     opacity: 0,
+            //     duration:1,
+            //     ease: Power1.easeOut
+            // });
+        }
+    }]
+});

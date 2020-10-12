@@ -6,10 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/dist/style.css">
     </head>
-    <body class="light">
+    <body class="light" data-barba="wrapper">
         <div id="topOfTPage"></div>
+        <ul id="tran">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         
-        <div class="loading"></div>
+
         
         <header>
             <h2 class="logo">
@@ -26,64 +33,65 @@
             
             
         </header>
-        <main>
+        
+
+    
+
+        <main data-barba="container" data-barba-namespace="blog">
             
             
-            
+        
             <section id="pinned posts">
                 
                 
                 
             </section>
-            <section id="lataest posts">
+            <section id="latestPosts">
                 
                 
-                <div class="post" onclick="location.href='/blog/posts/Flexbox-is-awesome!';" style="cursor: pointer;">
-                    <div class="postPic">
+                <div class="post cl2" onclick="location.href='/blog/posts/Flexbox-is-awesome!';" style="cursor: pointer;">
+                    <div class="postPic ">
                         <img src="/blog/posts/Flexbox-is-awesome!/pageimage.gif" alt="">
                     </div>
-                    <div class="postContent">
-                        <div class="postContentOverlay"></div>
-                        <div class="postTitle">
-                            <h3 style="margin-bottom: -20px;">
+                    
+                            <h3 >
                                 <!-- content insertion -->
                                 <!-- content type==title -->
                                 Flexbox is awesome!
                             </h3>
-                            <h6 style="margin-bottom: -10px;">
+                            <h6 >
                                 <!-- content insertion -->
                                 <!-- content type==date_and_writer -->
                                 19 september 2020
-                            </h6>
-                        </div>
-                        <div class="postText">
+                            </h6> 
+                            
                             <p>
                                 <!-- content insertion -->
                                 <!-- content type==text -->
                                 These days I am trying to make a new template and while writing it, I tried to learn the grid first. It is a great layout, but I could not achieve what I wanted. It would have looked good if I wanted a more complex design though. I found out and learned more about flexbox, I enjoy using it. in near future, I might build something with grid layout. It is extremely powerful, I believe bootstrap uses it, I have never used bootstrap but grid looks really interesting suddenly from nowhere!!! check the thing out if you are interested in is in my <a href="https://github.com/realabja/powercoders/tree/master/Week2/themeHunting">github</a> for now 👋 .             </p>
-                            </div>
-                    
+                                <h6 class="readm">
+                                    read more
+                                </h6> 
                         </div>
-                    </div>
-                    <div class="post" onclick="location.href='/blog/posts/Bash-terminal';" style="cursor: pointer;">
+                       
+                    
+                    <div class="post cl3" onclick="location.href='/blog/posts/Bash-terminal';" style="cursor: pointer;">
                         <div class="postPic">
                             <img src="/blog/posts/Bash-terminal/pageimage.png" alt="">
                         </div>
-                        <div class="postContent">
-                            <div class="postContentOverlay"></div>
-                <div class="postTitle">
-                    <h3 style="margin-bottom: -20px;">
+                        
+                    <h3 >
                         <!-- content insertion -->
                         <!-- content type==title -->
                         Bash terminal
                     </h3>
-                    <h6 style="margin-bottom: -10px;">
+                    <h6 >
                         <!-- content insertion -->
                         <!-- content type==date_and_writer -->
                         14 September 2020
                     </h6>
-                </div>
-                <div class="postText">
+                
+              
                     <p>
                         <!-- content insertion -->
                         <!-- content type==text -->
@@ -91,38 +99,37 @@
                         
                         there are cool things we can use it for and it is also different from programming in a way and it is always good to do something just to get push
                         
-                        yourself further and think from a different perspective. I love this journey of mine.             </p>
-                    </div>
-                    
+                        yourself further and think from a different perspective. I love this journey of mine.     
+                            </p>
+                            <h6 class="readm">
+                                read more
+                            </h6>                     
                 </div>
             </div>
-            <div class="post" onclick="location.href='/blog/posts/Pathfinding-Visualization';" style="cursor: pointer;">
+            <div class="post cl1" onclick="location.href='/blog/posts/Pathfinding-Visualization';" style="cursor: pointer;">
                 <div class="postPic">
-                    
                     <img src="/blog/posts/Pathfinding-Visualization/pageimage.gif" alt="">
                 </div>
-                <div class="postContent">
-                    <div class="postContentOverlay"></div>
-                    <div class="postTitle">
-                        <h3 style="margin-bottom: -20px;"></h3>
+                
+                        <h3  >Pathfinding Visualization</h3>
                         <!-- content insertion -->
                         <!-- content type==title -->
-                        Pathfinding Visualization
+                       
                     </h3>
-                    <h6 style="margin-bottom: -10px;">
+                    <h6 >
                         <!-- content insertion -->
                         <!-- content type==date_and_writer -->
                         30 August 2020
                     </h6>
-                </div>
-                <div class="postText">
+                
+               
                     <p>
                         <!-- content insertion -->
                         <!-- content type==text -->
                         I wanted to do this project for a long time I finally made it. I will put it online as soon as I can. There were lots of things that I needed to brush up, I can say,  it was fun. There were lots of mistakes, I learned a lot about my coding and where I make lots of mistakes and that is reassigning values, most importantly I think was the practice of finding problems,  yet my code isn't perfect and  I need to find solution to some performance issues that I found, but it works for now <br> here is the link if you wanted to see the code <a href="https://github.com/realabja/Pathfinding_Visualization">GitHub</a> and the <a href="">link</a> to play it online I will add more algorithms to make it more fun.             </p>
-                    </div>
-                    
-                </div>
+                        <h6 class="readm">
+                            read more
+                        </h6> 
             </div>
             <div class="post" onclick="location.href='/blog/posts/JavaScript-Objects-and-Inheritance';" style="cursor: pointer;">
                 <div class="postPic">
@@ -393,11 +400,11 @@
                     </div>
                 </div> 
                 <button class="btn" onclick="">Load more</button> 
-            </div>
+            
             
         </div>
         
-    </div>
+    
     
     
     
@@ -406,7 +413,7 @@
 
 
 <footer id="contact">
-    <div></div>
+    <!-- <div></div> -->
     <ul>
         <li id="github"><a href="https://github.com/realabja">git</a><img src="/pic/git.png" alt="" srcset=""></li>
         <li id="linkedin"><a href="">link</a><img src="/pic/tw1.png" alt="" srcset=""></li>
@@ -416,9 +423,9 @@
 </footer>
 <div id="cursor"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://unpkg.com/@barba/core"></script>
+
 <script src="/app.js"></script>
-
-
 
 <!-- scoth scroll cross browser -->
 <!-- scoth scroll cross browser -->
