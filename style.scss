@@ -15,7 +15,7 @@
 
 }
 *{
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 html{
     margin: 0;
@@ -37,7 +37,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    // overflow-x: hidden;
+    overflow: hidden;
     cursor: url(../misc/cursor.svg), auto;
 }   
 
@@ -250,26 +250,31 @@ main{
             box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
             border-radius: 0.5rem;
             flex-basis: 400px;
-            min-height: 30vh;
+            min-height: 50vh;
             margin: 1rem;
             padding: 1rem;
             flex-grow: 1;
             position: relative;
             overflow: hidden; 
-            transition: color 0.2s ease-in-out, transform 0.2s ease;
+            transition: color 0.5s ease-in-out, transform 0.2s ease;
             .cl1{
                 background: #ed65709c;
-                transition: background-color 3s ease;
+                transition: background-color 0.5s ease;
                 
             }
             .cl2{
                 background: #ffd186a8;
-                transition: background-color 3s ease;
+                transition: background-color 0.5s ease;
                 
             }
             .cl3{
                 background: #4e9bb9a9;
-                transition: background-color 3s ease;
+                transition: background-color 0.5s ease;
+            }
+            .cl4{
+                background: #68607cad;
+                transition: background-color 0.5s ease;
+
             }
             .imgContainer{
                 z-index: -2;
@@ -320,6 +325,9 @@ main{
         justify-content: space-evenly;
         flex-wrap: wrap;
         div{
+            h2{
+                margin: 0.2rem;
+            }
             flex-basis: 400px;
             flex-grow: 1;
             margin: 1rem;
@@ -345,22 +353,39 @@ main{
     
     
 }
+@media screen and (max-width: 500px){
+    main{
+        padding: 1rem;
+        
+        #myskills{
+            div{
+                margin:0.3rem;
+                ul{
+                    margin-left: 0rem;
+                    padding-left: 0.5rem;
+                    li{
+                        p{
+                            padding-left: 0.5rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
+
 
 
 footer{
     position: relative;
     min-height: 4rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    // padding: 1rem;
-    div{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: -20;
-        padding: 1rem;
-        background-color: var(--darka);
-    }
+    align-items: center;
+    background-color: var(--darka);
     
     ul{
         width: 100%;
@@ -377,47 +402,30 @@ footer{
             height: 2rem;
             position: relative;
             transition: all 0.4s ease;
-            // z-index: -10;
             overflow: hidden;
             border-radius: 0.5rem;
             a{
                 display: inline-block;    
                 height: 100%;
                 width: 100%;
-                z-index: -10;
-                // background-color:wheat;
+                // z-index: -10;
                 
             }
             img{
-                // box-shadow: wheat 0px 0.15rem 0.5rem, wheat 0px 0.075rem 0.175rem;
-                // transform: scale(0.8);
-                background-color:rgb(229, 216, 190);
+                
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                z-index: -2;
                 height: 100%;
             }
         &:hover{
             transform: scale(1.5);
             border-radius: 4px;
-                img{
-                    background-color: whitesmoke;
-                }
-            }
-        &:nth-child(1):hover{
-            border-radius: 50%;
-        }
-        &:nth-child(2):hover{
-            border-radius: 30%;
-        }
-
-        &:nth-child(4):hover{
-            border-radius: 30%;
+             
         }
         }
-        }
+    }
     
     &:hover~#cursor{
 
@@ -427,9 +435,6 @@ footer{
     
 }    
 
-img{
-    z-index: -3;
-}
 
 li{
     list-style: none;
@@ -509,6 +514,7 @@ section#latestPosts{
         border-radius: 0.5rem;
         flex-basis: 400px;
         min-height: 30vh;
+        max-height: 50vh;
         margin: 1rem;
         padding: 1rem;
         flex-grow: 1;
