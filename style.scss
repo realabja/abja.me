@@ -226,9 +226,13 @@ main{
     min-height: 200vh;
     flex-grow: 1;
     padding: 5rem;
+    padding-bottom: 1rem;
     line-height: 1.7em;
     article{
         margin-bottom: 4rem;
+    &:last-child{
+        margin-bottom: 1rem;
+    }
         
         h2{
             text-transform: uppercase;
@@ -256,12 +260,12 @@ main{
             .cl1{
                 background: #ed65709c;
                 transition: background-color 3s ease;
-        
+                
             }
             .cl2{
                 background: #ffd186a8;
                 transition: background-color 3s ease;
-        
+                
             }
             .cl3{
                 background: #4e9bb9a9;
@@ -296,6 +300,9 @@ main{
             
             &:hover{
                 color: transparent;
+                p{
+                    pointer-events: none;
+                }
                 transform: translateY(-0.5rem);
                 .imgContainer{
                     opacity: 0.9;
@@ -311,7 +318,10 @@ main{
     #myskills{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         div{
+            flex-basis: 400px;
+            flex-grow: 1;
             margin: 1rem;
             border-radius: 0.5rem;
             box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;

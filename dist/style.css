@@ -210,10 +210,14 @@ main {
   min-height: 200vh;
   flex-grow: 1;
   padding: 5rem;
+  padding-bottom: 1rem;
   line-height: 1.7em;
 }
 main article {
   margin-bottom: 4rem;
+}
+main article:last-child {
+  margin-bottom: 1rem;
 }
 main article h2 {
   text-transform: uppercase;
@@ -276,6 +280,9 @@ main #myProjects article:hover {
   color: transparent;
   transform: translateY(-0.5rem);
 }
+main #myProjects article:hover p {
+  pointer-events: none;
+}
 main #myProjects article:hover .imgContainer {
   opacity: 0.9;
 }
@@ -286,8 +293,11 @@ main #myProjects article:hover .imgContainer img {
 main #myskills {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 main #myskills div {
+  flex-basis: 400px;
+  flex-grow: 1;
   margin: 1rem;
   border-radius: 0.5rem;
   box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
