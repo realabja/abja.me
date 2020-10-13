@@ -210,6 +210,7 @@ main {
   min-height: 200vh;
   flex-grow: 1;
   padding: 5rem;
+  line-height: 1.7em;
 }
 main article {
   margin-bottom: 4rem;
@@ -235,7 +236,7 @@ main #myProjects article {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
-  transition: color 2s ease-in-out, transform 0.2s ease;
+  transition: color 0.2s ease-in-out, transform 0.2s ease;
 }
 main #myProjects article .cl1 {
   background: #ed65709c;
@@ -281,6 +282,25 @@ main #myProjects article:hover .imgContainer {
 main #myProjects article:hover .imgContainer img {
   opacity: 0.9;
   transform: scale(1.1);
+}
+main #myskills {
+  display: flex;
+  justify-content: space-evenly;
+}
+main #myskills div {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
+}
+main #myskills div ul li {
+  margin-bottom: 2rem;
+}
+main #myskills div ul li h3 {
+  margin-bottom: 1rem;
+}
+main #myskills div ul li p {
+  padding-left: 2rem;
+  padding-right: 1rem;
 }
 
 footer {

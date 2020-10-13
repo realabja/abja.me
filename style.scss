@@ -226,9 +226,10 @@ main{
     min-height: 200vh;
     flex-grow: 1;
     padding: 5rem;
+    line-height: 1.7em;
     article{
         margin-bottom: 4rem;
-
+        
         h2{
             text-transform: uppercase;
             text-align: center;
@@ -251,7 +252,7 @@ main{
             flex-grow: 1;
             position: relative;
             overflow: hidden; 
-            transition: color 2s ease-in-out, transform 0.2s ease;
+            transition: color 0.2s ease-in-out, transform 0.2s ease;
             .cl1{
                 background: #ed65709c;
                 transition: background-color 3s ease;
@@ -307,9 +308,34 @@ main{
             } 
         }
     }
+    #myskills{
+        display: flex;
+        justify-content: space-evenly;
+        div{
+            margin: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
+            ul{
+                li{
+                margin-bottom: 2rem;
+
+                    h3{
+                        // padding-bottom: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                    p{
+                        padding-left: 2rem;
+                        padding-right: 1rem;
+                    }
+                }
+            }
+
+        }
+    }
     
     
 }
+
 
 footer{
     position: relative;
