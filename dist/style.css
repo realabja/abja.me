@@ -10,6 +10,11 @@
   --cl3:#F69489;
   --cl4:#ED6571;
   --cl5:#68607C;
+  backface-visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -19,6 +24,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   position: relative;
   margin: 0;
   padding: 0;
@@ -32,15 +38,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
   cursor: url(../misc/cursor.svg), auto;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  min-height: 10vh;
-  padding: 0 5rem;
+  padding: 1rem 5rem;
+}
+header .logo {
+  margin: 0;
+  padding: 0;
 }
 
 header > .logo {
@@ -51,15 +59,19 @@ header > .logo {
   font-weight: 200;
 }
 
-header > nav > ul {
+header > nav {
   display: flex;
+}
+header > nav ul {
+  display: flex;
+  align-self: center;
   justify-content: space-around;
   text-transform: uppercase;
 }
 
 header > nav > ul > li {
   cursor: pointer;
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 #landing {
@@ -225,6 +237,18 @@ main #myProjects article {
   overflow: hidden;
   transition: color 2s ease-in-out, transform 0.2s ease;
 }
+main #myProjects article .cl1 {
+  background: #ed65709c;
+  transition: background-color 3s ease;
+}
+main #myProjects article .cl2 {
+  background: #ffd186a8;
+  transition: background-color 3s ease;
+}
+main #myProjects article .cl3 {
+  background: #4e9bb9a9;
+  transition: background-color 3s ease;
+}
 main #myProjects article .imgContainer {
   z-index: -2;
   opacity: 0.9;
@@ -232,7 +256,6 @@ main #myProjects article .imgContainer {
   width: 100%;
   position: absolute;
   top: 0;
-  background: #dcc868;
   left: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -398,71 +421,62 @@ section#latestPosts {
   display: flex;
   flex-wrap: wrap;
 }
-section#latestPosts .cl1 {
-  background-color: #ed65709c;
-  transition: background-color 3s ease;
-}
-section#latestPosts .cl2 {
-  background-color: #ffd186a8;
-  transition: background-color 3s ease;
-}
-section#latestPosts .cl3 {
-  background-color: #4e9bb9a9;
-  transition: background-color 3s ease;
-}
-section#latestPosts .post {
+section#latestPosts article {
   box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
+  border-radius: 0.5rem;
   flex-basis: 400px;
-  height: 40vh;
-  overflow: hidden;
-  flex-grow: 1;
+  min-height: 30vh;
   margin: 1rem;
-  border-radius: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
   position: relative;
-  transition: color 1s ease-in-out, transform 0.5s ease, background-color 1s ease;
+  overflow: hidden;
+  transition: color 2s ease-in-out, transform 0.2s ease;
 }
-section#latestPosts .post .postPic {
-  position: absolute;
-  object-fit: cover;
-  z-index: -10;
+section#latestPosts article .cl1 {
+  background: #ed65709c;
+  transition: background-color 3s ease;
+}
+section#latestPosts article .cl2 {
+  background: #ffd186a8;
+  transition: background-color 3s ease;
+}
+section#latestPosts article .cl3 {
+  background: #4e9bb9a9;
+  transition: background-color 3s ease;
+}
+section#latestPosts article .postPic {
+  z-index: -2;
+  opacity: 0.9;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
-  opacity: 0.9;
-  transform: scale(1.1);
 }
-section#latestPosts .post .postPic img {
+section#latestPosts article .postPic img {
   z-index: -3;
   height: 100%;
+  opacity: 0.1;
   width: 100%;
   position: absolute;
   object-fit: cover;
   transition: all 0.6s ease-in-out;
 }
-section#latestPosts .post h3 {
-  padding: 1rem 1rem 5px 1rem;
-  margin: 0;
+section#latestPosts article .green {
+  background: #94d6b7;
 }
-section#latestPosts .post h6 {
-  margin: 0;
-  padding-left: 2rem;
-}
-section#latestPosts .post p {
-  max-height: 39%;
-  padding: 1.5rem;
-  margin: 1rem;
-  overflow: hidden;
-}
-section#latestPosts .post .readm {
-  padding-left: 80%;
-  margin-top: -0.5rem;
-}
-section#latestPosts .post:hover {
-  background-color: rgba(255, 0, 0, 0);
+section#latestPosts article:hover {
   color: transparent;
+  transform: translateY(-0.5rem);
+}
+section#latestPosts article:hover .imgContainer {
+  opacity: 0.9;
+}
+section#latestPosts article:hover .imgContainer img {
+  opacity: 0.9;
+  transform: scale(1.1);
 }
 section#latestPosts .wide {
   flex-basis: 600px;

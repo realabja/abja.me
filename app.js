@@ -34,9 +34,9 @@ if (document.querySelector("#topOfTPage")){
     })
 
 }
-const typed = document.querySelector("#typed")
 
 const type = async ()=>{
+    const typed = document.querySelector("#typed")
     if(typed){
     let fav = [ "a Machine Learning", "a Data Science", "an AI"]
     while(true){
@@ -61,38 +61,38 @@ type();
 
 
 
-if(document.querySelectorAll("#myProjects>article")){
-    const lazyStuff = document.querySelectorAll("#myProjects>article");
-    const observer = new IntersectionObserver((objects, observer)=>{
-        objects.forEach(object =>{
-            if(object.isIntersecting){
-                object.target.classList.add("observed");
-                let img;
-                for (item in object.target.childNodes) {
-                    if(object.target.childNodes[item].nodeName != "#text"){
-                        console.log(object.target.childNodes[item].classList)
-                        if (object.target.childNodes[item].classList.contains("imgContainer")) {
-                            console.log("some")
-                            img = object.target.childNodes[item];
-                            console.log(img)
-                            for (item in img.childNodes){
-                               if(img.childNodes[item].tagName == "IMG"){
-                                    img = img.childNodes[item]
-                                    src = img.dataset.lazy;
-                                    console.log(src);
-                                    img.setAttribute("src", src);
-                                    console.log(img);
+// if(document.querySelectorAll("#myProjects>article")){
+//     const lazyStuff = document.querySelectorAll("#myProjects>article");
+//     const observer = new IntersectionObserver((objects, observer)=>{
+//         objects.forEach(object =>{
+//             if(object.isIntersecting){
+//                 object.target.classList.add("observed");
+//                 let img;
+//                 for (item in object.target.childNodes) {
+//                     if(object.target.childNodes[item].nodeName != "#text"){
+//                         console.log(object.target.childNodes[item].classList)
+//                         if (object.target.childNodes[item].classList.contains("imgContainer")) {
+//                             console.log("some")
+//                             img = object.target.childNodes[item];
+//                             console.log(img)
+//                             for (item in img.childNodes){
+//                                if(img.childNodes[item].tagName == "IMG"){
+//                                     img = img.childNodes[item]
+//                                     src = img.dataset.lazy;
+//                                     console.log(src);
+//                                     img.setAttribute("src", src);
+//                                     console.log(img);
                                     
-                               } 
-                            }
-                    }
-                    // console.log(object.target.childNodes[item])
-                    }
-                }
-                observer.unobserve(object.target);
-            }
-        })
-    });
+//                                } 
+//                             }
+//                     }
+//                     // console.log(object.target.childNodes[item])
+//                     }
+//                 }
+//                 observer.unobserve(object.target);
+//             }
+//         })
+//     });
 
     try {
         lazyStuff.forEach(object =>{
@@ -103,14 +103,14 @@ if(document.querySelectorAll("#myProjects>article")){
     } catch (error) {
         console.log(error)
     }
-}
+
 // BARBA things
 // BARBA things
 // BARBA things
 barba.init({
     // sync: true,
     debug:true,
-    sync:true,
+    // sync:true,
     transitions: [{
       name: 'default-transition',
       async leave(data) {
@@ -120,7 +120,7 @@ barba.init({
         //     ease: Power1.easeOut
         // });
         const done = this.async();
-          type();
+        //   type();
            gsap.to("#tran li", {
               duration:0.5,
               scaleY: 1,
@@ -142,12 +142,15 @@ barba.init({
       },
        async enter(data) {
           
-            type();
+            // type();
             // gsap.from(data.next.container, {
             //     opacity: 0,
             //     duration:1,
             //     ease: Power1.easeOut
             // });
+        },
+        after(data){
+            type();
         }
     }]
 });

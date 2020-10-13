@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/dist/style.css">
     </head>
     <body class="light" data-barba="wrapper">
-        <div id="topOfTPage"></div>
+        <!-- <div id="topOfTPage"></div> -->
         <ul id="tran">
             <li></li>
             <li></li>
@@ -24,10 +24,10 @@
             </h2>
             <nav>
                 <ul>
-                    <li> <a href="/#topOfThePage">home</a> </li>
+                    <li> <a href="/">home</a> </li>
                     <li><a href="/blog">blog</a></li>
-                    <li> <a href="/index.html/#myProjects">projects</a></li>
-                    <li> <a href="#contact">contact</a> </li>
+                    <li> <a href="#">projects</a></li>
+                    <li> <a href="#contact" >contact</a> </li>
                 </ul>
             </nav>
             
@@ -49,8 +49,8 @@
             <section id="latestPosts">
                 
                 
-                <div class="post cl2 wide" onclick="location.href='/blog/posts/Flexbox-is-awesome!';" style="cursor: pointer;">
-                    <div class="postPic ">
+                <article onclick="location.href='/blog/posts/Flexbox-is-awesome!';" style="cursor: pointer;">
+                    <div class="postPic cl1 ">
                         <img src="/blog/posts/Flexbox-is-awesome!/pageimage.gif" alt="">
                     </div>
                     
@@ -72,11 +72,11 @@
                                 <h6 class="readm">
                                     read more
                                 </h6> 
-                        </div>
+                            </article>
                        
                     
-                    <div class="post cl3 small" onclick="location.href='/blog/posts/Bash-terminal';" style="cursor: pointer;">
-                        <div class="postPic">
+                    <article class="post cl3 small" onclick="location.href='/blog/posts/Bash-terminal';" style="cursor: pointer;">
+                        <div class="postPic cl2">
                             <img src="/blog/posts/Bash-terminal/pageimage.png" alt="">
                         </div>
                         
@@ -104,9 +104,9 @@
                             <h6 class="readm">
                                 read more
                             </h6>                     
-                </div>
-            </div>
-            <div class="post cl1" onclick="location.href='/blog/posts/Pathfinding-Visualization';" style="cursor: pointer;">
+        
+            </article>
+            <article class="post cl1" onclick="location.href='/blog/posts/Pathfinding-Visualization';" style="cursor: pointer;">
                 <div class="postPic">
                     <img src="/blog/posts/Pathfinding-Visualization/pageimage.gif" alt="">
                 </div>
@@ -130,8 +130,8 @@
                         <h6 class="readm">
                             read more
                         </h6> 
-            </div>
-            <div class="post" onclick="location.href='/blog/posts/JavaScript-Objects-and-Inheritance';" style="cursor: pointer;">
+            </article>
+            <article class="post" onclick="location.href='/blog/posts/JavaScript-Objects-and-Inheritance';" style="cursor: pointer;">
                 <div class="postPic">
                     <img src="/blog/posts/JavaScript-Objects-and-Inheritance/pageimage.png" alt="">
                 </div>
@@ -157,7 +157,8 @@
                         </div>
                         
                     </div>
-                </div>
+                
+                </article>
                 <div class="post" onclick="location.href='/blog/posts/Events-and-How-they-work-in-JavaScript';" style="cursor: pointer;">
                     <div class="postPic">
                         <img src="/blog/posts/Events-and-How-they-work-in-JavaScript/pageimage.png" alt="">
@@ -399,7 +400,7 @@
                         
                     </div>
                 </div> 
-                <button class="btn" onclick="">Load more</button> 
+             
             
             
         </div>

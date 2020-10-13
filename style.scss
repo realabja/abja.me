@@ -11,8 +11,11 @@
     --cl4:#ED6571;
     --cl5:#68607C;
 
+    backface-visibility: hidden;
 
-
+}
+*{
+    box-sizing: border-box;
 }
 html{
     margin: 0;
@@ -20,6 +23,7 @@ html{
     overflow-x: hidden;
 }
 body{
+    scroll-behavior: smooth;
     position: relative;
     margin: 0;
     padding: 0;
@@ -33,7 +37,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
+    // overflow-x: hidden;
     cursor: url(../misc/cursor.svg), auto;
 }   
 
@@ -41,8 +45,13 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    min-height: 10vh;
-    padding: 0 5rem ;
+    // min-height: 10vh;
+    // margin: 1rem;
+    padding: 1rem 5rem ;
+    .logo{
+        margin: 0;
+        padding: 0;
+    }
 }
 header>.logo{
     /* color: lavender; */
@@ -51,14 +60,19 @@ header>.logo{
     font-family: 'Corben', serif;
     font-weight: 200;
 }
-header>nav>ul{
+header>nav{
     display: flex;
-    justify-content: space-around;
-    text-transform: uppercase;
+    ul{
+        display: flex;
+        align-self: center;
+        justify-content: space-around;
+        text-transform: uppercase;
+    }
 }
 header>nav>ul>li{
     cursor: pointer;
-    margin: 1rem;
+    margin: 0 1rem;
+
 }
 #landing{
     width: 100vw;
@@ -238,6 +252,20 @@ main{
             position: relative;
             overflow: hidden; 
             transition: color 2s ease-in-out, transform 0.2s ease;
+            .cl1{
+                background: #ed65709c;
+                transition: background-color 3s ease;
+        
+            }
+            .cl2{
+                background: #ffd186a8;
+                transition: background-color 3s ease;
+        
+            }
+            .cl3{
+                background: #4e9bb9a9;
+                transition: background-color 3s ease;
+            }
             .imgContainer{
                 z-index: -2;
                 opacity: 0.9;
@@ -246,7 +274,7 @@ main{
                 position: absolute;
                 top: 0;
                 
-                background: #dcc868;
+                // background: #dcc868;
                 left: 0;
                 transition: all 0.3s ease-in-out;
                 img{
@@ -440,79 +468,73 @@ div{
 section#latestPosts{
     display: flex;
     flex-wrap: wrap;
-    .cl1{
-        background-color: #ed65709c;
-        transition: background-color 3s ease;
-
-    }
-    .cl2{
-        background-color: #ffd186a8;
-        transition: background-color 3s ease;
-
-    }
-    .cl3{
-        background-color: #4e9bb9a9;
-        transition: background-color 3s ease;
-    }
-    .post{
+    article{
         box-shadow: rgba(3, 8, 20, 0.2) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.2) 0px 0.075rem 0.175rem;
+        border-radius: 0.5rem;
         flex-basis: 400px;
-        height: 40vh;
-        overflow: hidden;
-        flex-grow: 1;
+        min-height: 30vh;
         margin: 1rem;
-        border-radius: 1rem;
+        padding: 1rem;
+        flex-grow: 1;
         position: relative;
-        transition: color 1s ease-in-out, transform 0.5s ease, background-color 1s ease;
+        overflow: hidden; 
+        transition: color 2s ease-in-out, transform 0.2s ease;
+        .cl1{
+            background: #ed65709c;
+            transition: background-color 3s ease;
+            
+        }
+        .cl2{
+            background: #ffd186a8;
+            transition: background-color 3s ease;
+            
+        }
+        .cl3{
+            background: #4e9bb9a9;
+            transition: background-color 3s ease;
+        }
         .postPic{
-            position: absolute;
-            object-fit: cover;
-            z-index: -10;
+            z-index: -2;
+            opacity: 0.9;
             height: 100%;
             width: 100%;
             position: absolute;
             top: 0;
+            
+            // background: #dcc868;
             left: 0;
             transition: all 0.3s ease-in-out;
-            opacity: 0.9;
-            transform: scale(1.1);
-            
             img{
                 z-index: -3;
                 height: 100%;
+                opacity: 0.1;
                 width: 100%;
                 position: absolute;
                 object-fit: cover;
                 transition: all 0.6s ease-in-out;
             }
         }
-        h3{
-            padding: 1rem 1rem 5px 1rem;
-            margin: 0;
-        }
-        h6{
-            margin: 0;
-            padding-left: 2rem;
-        }
-        p{
-            max-height: 39%;
-            padding: 1.5rem;
-            margin: 1rem;
-            overflow: hidden;
+        .green{
+            background: #94d6b7;
             
-        }
-        .readm{
-            padding-left: 80%;
-            margin-top: -0.5rem;
         }
         
+        
         &:hover{
-            background-color: rgba(255, 0, 0, 0);
             color: transparent;
-            // transform: translateY(-0.5rem);
-            
+            transform: translateY(-0.5rem);
+            .imgContainer{
+                opacity: 0.9;
+                img{
+                    opacity: 0.9;
+                    transform: scale(1.1);
+                    
+                }
+            }
         } 
     }
+    
+    
     .wide{
         flex-basis: 600px;    
     }
@@ -521,4 +543,5 @@ section#latestPosts{
     }
     
 }
+
 
