@@ -211,6 +211,26 @@
 
     <script src="/app.js"></script>
   
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+        </script>
+        <script>
+            function vi(response) {
+
+                if(!localStorage.getItem("myvisits")){
+                    localStorage.setItem("myvisits", response.value);
+
+                }
+                else{
+                    localStorage.setItem("myvisits", Number(localStorage.getItem("myvisits"))+1);
+                    console.log(localStorage.getItem("myvisits"));
+                }
+                console.log(response.value);
+            }
+            </script>
+        <script async src="https://api.countapi.xyz/hit/abja.me/visits?callback=vi"></script>
 
     <!-- scoth scroll cross browser -->
 <!-- scoth scroll cross browser -->

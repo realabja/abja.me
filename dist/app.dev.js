@@ -6,6 +6,8 @@ var sleep = function sleep(time) {
   });
 };
 
+window.onload = function () {};
+
 var cursor = document.querySelector("#cursor");
 document.addEventListener("mousemove", function (e) {
   cursor.style.top = "".concat(e.pageY - 10, "px");

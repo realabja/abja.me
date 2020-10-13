@@ -1,7 +1,9 @@
 const sleep = function (time){
     return new Promise(resolve => setTimeout(resolve, time));
 }
-
+window.onload = ()=>{
+    
+}
 
 const cursor = document.querySelector("#cursor");
 document.addEventListener("mousemove" , e =>{

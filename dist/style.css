@@ -461,19 +461,19 @@ section#latestPosts article {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
-  transition: color 2s ease-in-out, transform 0.2s ease;
+  transition: color 0.5s ease-in-out, transform 0.2s ease;
 }
 section#latestPosts article .cl1 {
   background: #ed65709c;
-  transition: background-color 3s ease;
+  transition: background-color 0.5s ease;
 }
 section#latestPosts article .cl2 {
   background: #ffd186a8;
-  transition: background-color 3s ease;
+  transition: background-color 0.5s ease;
 }
 section#latestPosts article .cl3 {
   background: #4e9bb9a9;
-  transition: background-color 3s ease;
+  transition: background-color 0.5s ease;
 }
 section#latestPosts article .postPic {
   z-index: -2;
@@ -501,10 +501,10 @@ section#latestPosts article:hover {
   color: transparent;
   transform: translateY(-0.5rem);
 }
-section#latestPosts article:hover .imgContainer {
+section#latestPosts article:hover .postPic {
   opacity: 0.9;
 }
-section#latestPosts article:hover .imgContainer img {
+section#latestPosts article:hover .postPic img {
   opacity: 0.9;
   transform: scale(1.1);
 }
