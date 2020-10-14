@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>abja.me</title>
-    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body data-barba="wrapper">
     <!-- <div id="topOfTPage"></div> -->
@@ -83,7 +83,7 @@
                     </div>
                     
                 </article>
-                <article>
+                <article onclick="location.href='https://abja.me';">
                     <h3>Portfolio</h3>
                     <p> Currently where you are. It has always amazed me how we can make great websites/ platforms simply with JavaScript, HTML and CSS. I can make sure now that I have enough knowledge and strong basis to do more complex project!!!
                     </p>
@@ -92,14 +92,14 @@
                     </div>
                     
                 </article>
-                <article>
+                <article onclick="location.href='https://github.com/realabja/pagegenerator/tree/master/pagegenerator';">
                     <h3>Static Page Generator</h3>
                     <p>
 
                         Just a quick way to generate static web pages with python easy to understand and powerfull
                     </p>
                     <div class="imgContainer cl3">
-                        <img src="blog/posts/Class-Objects-and-Variables-in-Python-and-JavaScript/pageimage.png" alt="Pathfinding-Visualization">
+                        <img src="blog/posts/Creating-a-static-page-generator-for-blog/pageimage.png" alt="Pathfinding-Visualization">
                     </div>
                     
                     
@@ -197,13 +197,20 @@
 
 
     <footer id="contact">
-        <div></div>
+    
         <ul>
             <li id="github"><a href="https://github.com/realabja">git</a><img src="pic/git.png" alt="" srcset=""></li>
             <li id="linkedin"><a href="">link</a><img src="pic/tw1.png" alt="" srcset=""></li>
             <li id="twitter"><a href="">twitter</a><img src="pic/li2.png" alt="" srcset=""></li>
             <li id="email"><a href="mailto:abbas.jafari@powercoders.org">email</a><img src="pic/gmail.png" alt="" srcset=""></li>
         </ul>
+        <div style="text-align: center; display: flex; justify-content: space-around; width: 100%; flex-wrap: wrap;">
+            <p style=" display: inline-block; margin: 0; padding: 0; color: lavender; flex-basis: 200px;">&copy; 2020 abja.me</p>
+            <p style="display: inline-block; margin: 0; padding: 0; color: lavender    ;">
+                abbas.jafari@powecoders.org
+            </p>
+
+        </div>
     </footer>
     <div id="cursor"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -225,7 +232,8 @@
                 }
                 else{
                     localStorage.setItem("myvisits", Number(localStorage.getItem("myvisits"))+1);
-                    // console.log(localStorage.getItem("myvisits"));
+                    console.log(localStorage.getItem("myvisits"));
+                    console.log(response.value)
                 }
             }
             </script>
