@@ -40,7 +40,7 @@ if (document.querySelector("#topOfTPage")){
 const type = async ()=>{
     const typed = document.querySelector("#typed")
     if(typed){
-    let fav = [ "a Machine Learning", "a Data Science", "an AI"]
+    let fav = ["a web development", "a Machine Learning", "computer science ","a Data Science", "an AI"]
     while(true){
         for(let i = 0; i<fav.length; i++){
             
