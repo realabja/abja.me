@@ -126,11 +126,10 @@ header > nav > ul > li {
   color: white;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 20%;
 }
 #lander div * {
   display: inline-block;
-  margin: 0.1em;
 }
 #lander div #typed::after {
   content: "";
@@ -167,8 +166,8 @@ header > nav > ul > li {
     height: 50%;
   }
   #lander div {
-    left: 65%;
-    top: 20%;
+    left: 60%;
+    top: 50%;
   }
 }
 @media screen and (min-width: 1440px) {

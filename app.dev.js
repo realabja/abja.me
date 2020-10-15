@@ -50,7 +50,7 @@ var type = function type() {
             break;
           }
 
-          fav = ["a web development", "a Machine Learning", "computer science ", "a Data Science", "an AI"];
+          fav = [" a web development", " a Machine Learning", " a computer science ", " a Data Science", "an AI"];
 
         case 3:
           if (!true) {
